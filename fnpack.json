@@ -26,8 +26,8 @@
       ],
       "readme_url": "wb2api/README.md",
       "bug_report_url": "https://github.com/mingk326/FnDepot/issues",
-      "maintainer": "linguo2625469",
-      "maintainer_url": "https://github.com/linguo2625469/workbuddy2api-panel",
+      "maintainer": "mingk326",
+      "maintainer_url": "https://github.com/mingk326/workbuddy2api-panel",
       "distributor": "mingk326",
       "distributor_url": "https://github.com/mingk326/FnDepot",
       "run_as": "package",
@@ -37,17 +37,17 @@
       "releases": {
         "1.13.3": {
           "changelog": "修复并发刷新导致 refreshToken 被重复消费、账号掉登录；合入 issue #215 的余额 401 求证与面板「疑似登录失效」提示；chat 恒发 X-Conversation-* 三件套，修 11-128 / conversation id missing（#187/#188）；6021 queue.full 不再误判为账号限流冻结整池（#184）。",
-          "updated_at": "2026-10-18T00:00:00Z",
+          "updated_at": "2026-10-18T02:30:00Z",
           "packages": {
             "x86": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.18/wb2api-1.13.3-x86.fpk",
-              "sha256": "280e42cb28a4a192b18105a8e4917b71dc07e8372c49b84ac42011b3787ab30d",
-              "size": 4120280
+              "sha256": "f3d8daa5fd6cf76bd0707ea7fbac26f0c18231036f68cd2b06237c86b573506d",
+              "size": 4120263
             },
             "arm": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.18/wb2api-1.13.3-arm.fpk",
-              "sha256": "3c912e839808bab0d4b1a7c1b1f5edc8e73a443361bfa088df3d9ff8d937110d",
-              "size": 3748886
+              "sha256": "59dcd9f45549edb5834ce514509b318ae07c6e1d742fa4635514709a9fdf8da8",
+              "size": 3748870
             }
           }
         }
