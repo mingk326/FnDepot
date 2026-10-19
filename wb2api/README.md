@@ -10,12 +10,13 @@
 
 ## 当前版本
 
-`1.13.3`
+`1.13.6`
 
-- 修复并发刷新导致 refreshToken 被重复消费、账号掉登录
-- 余额探测 401 增加 refresh 求证，面板透出「疑似登录失效 · 待重登」
-- chat 出站恒发 `X-Conversation-*` 三件套，修复国际版 `11-128 / conversation id missing`
-- `429 + code 6021 queue.full` 不再误判为账号限流，避免整池冷却
+- 修复 `6020 queue.waiting` / `6021 queue.full` 被误判为账号限流，导致整池账号被逐个冻结、其他账号也报 429
+- 跨进程 token 刷新兜底：撞 `12153` 时读回磁盘上已被其它进程刷新的新 refreshToken 重试，修复双进程部署掉登录
+- `11140 request illegal` 由永久禁用账号改为软冷却，不再误杀仍可用的账号
+- 新增任务补领清扫：分钟级幂等 accept / claim，把「进度已达标但没人领」的成长任务奖励补领掉
+- 新增 `WorkBuddy_Valorant`（无畏契约拼豆专家）一键完成
 
 ## 说明
 
