@@ -89,13 +89,13 @@
           "packages": {
             "x86": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20/wb2api-1.13.6-x86.fpk",
-              "sha256": "b153a617a225a3e8b5f418d638f335f2c845a6d6db9a4003bf45be5de8b5fb78",
-              "size": 4128440
+              "sha256": "fe671ada0f6a0cb00ad5e329b278b8bff92e930b83385dc659e389110bdae5ba",
+              "size": 4128357
             },
             "arm": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20/wb2api-1.13.6-arm.fpk",
-              "sha256": "55835aa48a92197782bfb0ed8c0478ac6912c4f4531d47dadf0b791e103a980a",
-              "size": 3758524
+              "sha256": "bb110e93654d23487d3ff9df6d5c1da6b11d5ea02fea08f363ee3c05daf7ee1e",
+              "size": 3758615
             }
           }
         }
