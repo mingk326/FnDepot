@@ -26,8 +26,8 @@
       ],
       "readme_url": "wb2api/README.md",
       "bug_report_url": "https://github.com/mingk326/FnDepot/issues",
-      "maintainer": "mingk326",
-      "maintainer_url": "https://github.com/mingk326/workbuddy2api-panel",
+      "maintainer": "linguo2625469",
+      "maintainer_url": "https://github.com/linguo2625469/workbuddy2api-panel",
       "distributor": "mingk326",
       "distributor_url": "https://github.com/mingk326/FnDepot",
       "run_as": "package",
@@ -89,13 +89,13 @@
           "packages": {
             "x86": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20/wb2api-1.13.6-x86.fpk",
-              "sha256": "fe671ada0f6a0cb00ad5e329b278b8bff92e930b83385dc659e389110bdae5ba",
-              "size": 4128357
+              "sha256": "b95644b1bb143373678cac5cde0b8e0097d07301a66741f1fbf58b52a150d87e",
+              "size": 4128293
             },
             "arm": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20/wb2api-1.13.6-arm.fpk",
-              "sha256": "bb110e93654d23487d3ff9df6d5c1da6b11d5ea02fea08f363ee3c05daf7ee1e",
-              "size": 3758615
+              "sha256": "cc1e83aeac578e9a444d3ea57ce0970dc4b090d2660f8a7668fc309265a813fa",
+              "size": 3758583
             }
           }
         }
