@@ -51,6 +51,38 @@
             }
           }
         },
+        "1.13.5": {
+          "changelog": "新增 WorkBuddy_Valorant（体验「无畏契约拼豆专家」）一键完成任务（#228）：与 Expert_lighthouse 同构——专家市场取真实条目 ex_xQHHD1u5Jkua → 召唤链 → 真实对话取服务端 requestId → agent_task_created 补 has_expert → expert_actual_use(mode=LOCAL)。该任务判据尚无真实样本，标记为尝试型（点亮未实测）。",
+          "updated_at": "2026-10-19T16:46:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.19/wb2api-1.13.5-x86.fpk",
+              "sha256": "9402b520fedc7262014ffc09558989ec9bb60e233ad02f9b064295053eab469c",
+              "size": 4120638
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.19/wb2api-1.13.5-arm.fpk",
+              "sha256": "e88302df2074a6dfeee92644dc50a6c202162c022946ed68c247ec6b3654b855",
+              "size": 3750829
+            }
+          }
+        },
+        "1.13.4": {
+          "changelog": "修复上游 429 code 6020 queue.waiting 与 6021 queue.full 这类渠道级排队被误判为账号限流：原先按账号逐个软冷却，导致个别账号排队时整池账号被连续冻结、其他账号也报 429 rate limit。现统一归为渠道级忙，不冷却不轮换，改用上游 data.retry_after 直接返回 503 upstream_busy。",
+          "updated_at": "2026-10-19T08:10:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.19/wb2api-1.13.4-x86.fpk",
+              "sha256": "1a22bf9641351b1daf36de60ef2a17d2b00f0ce0702e54abbfbb580077cff66d",
+              "size": 4120620
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.19/wb2api-1.13.4-arm.fpk",
+              "sha256": "6a3c0b823e607fb858a96cfb1f3c117f175de9382f13d3db71cb8dc54e72aebe",
+              "size": 3750028
+            }
+          }
+        },
         "1.13.3": {
           "changelog": "修复并发刷新导致 refreshToken 被重复消费、账号掉登录；合入 issue #215 的余额 401 求证与面板「疑似登录失效」提示；chat 恒发 X-Conversation-* 三件套，修 11-128 / conversation id missing（#187/#188）；6021 queue.full 不再误判为账号限流冻结整池（#184）。",
           "updated_at": "2026-10-18T02:30:00Z",
