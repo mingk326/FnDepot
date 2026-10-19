@@ -35,35 +35,19 @@
       "is_docker": false,
       "service_port": "7863",
       "releases": {
-        "1.13.6": {
-          "changelog": "累积 1.13.4→1.13.6。修复 6020 queue.waiting 与 6021 queue.full 被判成账号限流导致整池逐个冻结、其他账号也报 429（改用上游 retry_after 返回 503 upstream_busy，不冷却不轮转）；新增跨进程 token 刷新兜底，撞 12153 时读回磁盘上已被其它进程 rotate 的新 refreshToken 重试，修复双进程部署掉登录（#215）；11140「request illegal」渠道校验拦截由永久禁用账号改为软冷却（#197）；新增任务补领清扫，分钟级幂等 accept/claim，把「进度达标但没人领」的成长任务奖励补领掉（#174）；新增 WorkBuddy_Valorant 一键完成（#228，点亮未实测）。",
-          "updated_at": "2026-10-19T17:23:56Z",
+        "1.13.3": {
+          "changelog": "修复并发刷新导致 refreshToken 被重复消费、账号掉登录；合入 issue #215 的余额 401 求证与面板「疑似登录失效」提示；chat 恒发 X-Conversation-* 三件套，修 11-128 / conversation id missing（#187/#188）；6021 queue.full 不再误判为账号限流冻结整池（#184）。",
+          "updated_at": "2026-10-18T02:30:00Z",
           "packages": {
             "x86": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20/wb2api-1.13.6-x86.fpk",
-              "sha256": "b153a617a225a3e8b5f418d638f335f2c845a6d6db9a4003bf45be5de8b5fb78",
-              "size": 4128440
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.18/wb2api-1.13.3-x86.fpk",
+              "sha256": "f3d8daa5fd6cf76bd0707ea7fbac26f0c18231036f68cd2b06237c86b573506d",
+              "size": 4120263
             },
             "arm": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20/wb2api-1.13.6-arm.fpk",
-              "sha256": "55835aa48a92197782bfb0ed8c0478ac6912c4f4531d47dadf0b791e103a980a",
-              "size": 3758524
-            }
-          }
-        },
-        "1.13.5": {
-          "changelog": "新增 WorkBuddy_Valorant（体验「无畏契约拼豆专家」）一键完成任务（#228）：与 Expert_lighthouse 同构——专家市场取真实条目 ex_xQHHD1u5Jkua → 召唤链 → 真实对话取服务端 requestId → agent_task_created 补 has_expert → expert_actual_use(mode=LOCAL)。该任务判据尚无真实样本，标记为尝试型（点亮未实测）。",
-          "updated_at": "2026-10-19T16:46:00Z",
-          "packages": {
-            "x86": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.19/wb2api-1.13.5-x86.fpk",
-              "sha256": "9402b520fedc7262014ffc09558989ec9bb60e233ad02f9b064295053eab469c",
-              "size": 4120638
-            },
-            "arm": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.19/wb2api-1.13.5-arm.fpk",
-              "sha256": "e88302df2074a6dfeee92644dc50a6c202162c022946ed68c247ec6b3654b855",
-              "size": 3750829
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.18/wb2api-1.13.3-arm.fpk",
+              "sha256": "59dcd9f45549edb5834ce514509b318ae07c6e1d742fa4635514709a9fdf8da8",
+              "size": 3748870
             }
           }
         },
@@ -83,19 +67,35 @@
             }
           }
         },
-        "1.13.3": {
-          "changelog": "修复并发刷新导致 refreshToken 被重复消费、账号掉登录；合入 issue #215 的余额 401 求证与面板「疑似登录失效」提示；chat 恒发 X-Conversation-* 三件套，修 11-128 / conversation id missing（#187/#188）；6021 queue.full 不再误判为账号限流冻结整池（#184）。",
-          "updated_at": "2026-10-18T02:30:00Z",
+        "1.13.5": {
+          "changelog": "新增 WorkBuddy_Valorant（体验「无畏契约拼豆专家」）一键完成任务（#228）：与 Expert_lighthouse 同构——专家市场取真实条目 ex_xQHHD1u5Jkua → 召唤链 → 真实对话取服务端 requestId → agent_task_created 补 has_expert → expert_actual_use(mode=LOCAL)。该任务判据尚无真实样本，标记为尝试型（点亮未实测）。",
+          "updated_at": "2026-10-19T16:46:00Z",
           "packages": {
             "x86": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.18/wb2api-1.13.3-x86.fpk",
-              "sha256": "f3d8daa5fd6cf76bd0707ea7fbac26f0c18231036f68cd2b06237c86b573506d",
-              "size": 4120263
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.19/wb2api-1.13.5-x86.fpk",
+              "sha256": "9402b520fedc7262014ffc09558989ec9bb60e233ad02f9b064295053eab469c",
+              "size": 4120638
             },
             "arm": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.18/wb2api-1.13.3-arm.fpk",
-              "sha256": "59dcd9f45549edb5834ce514509b318ae07c6e1d742fa4635514709a9fdf8da8",
-              "size": 3748870
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.19/wb2api-1.13.5-arm.fpk",
+              "sha256": "e88302df2074a6dfeee92644dc50a6c202162c022946ed68c247ec6b3654b855",
+              "size": 3750829
+            }
+          }
+        },
+        "1.13.6": {
+          "changelog": "累积 1.13.4→1.13.6。修复 6020 queue.waiting 与 6021 queue.full 被判成账号限流导致整池逐个冻结、其他账号也报 429（改用上游 retry_after 返回 503 upstream_busy，不冷却不轮转）；新增跨进程 token 刷新兜底，撞 12153 时读回磁盘上已被其它进程 rotate 的新 refreshToken 重试，修复双进程部署掉登录（#215）；11140「request illegal」渠道校验拦截由永久禁用账号改为软冷却（#197）；新增任务补领清扫，分钟级幂等 accept/claim，把「进度达标但没人领」的成长任务奖励补领掉（#174）；新增 WorkBuddy_Valorant 一键完成（#228，点亮未实测）。",
+          "updated_at": "2026-10-19T17:23:56Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20/wb2api-1.13.6-x86.fpk",
+              "sha256": "b153a617a225a3e8b5f418d638f335f2c845a6d6db9a4003bf45be5de8b5fb78",
+              "size": 4128440
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20/wb2api-1.13.6-arm.fpk",
+              "sha256": "55835aa48a92197782bfb0ed8c0478ac6912c4f4531d47dadf0b791e103a980a",
+              "size": 3758524
             }
           }
         }
