@@ -98,6 +98,54 @@
               "size": 3758583
             }
           }
+        },
+        "1.13.7": {
+          "changelog": "14003「当前模型请求繁忙」与 6004 同归模型级限流：只停 (账号,模型)，换模型立即可用，不再冷却整个账号；6004 无重置时间也按模型级停车（#229）。11140 与 11-128 精确分野：11-128 渠道校验仍软冷却；11140 账号级授权风控改为禁用并提示官方申诉（#197）。新增积分闸（当日上限 / 5 分钟突发 / 连续低缓存率冷却，budget.*）与 Prometheus /metrics（缺省关闭，api_key 鉴权）。",
+          "updated_at": "2026-10-20T06:50:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20a/wb2api-1.13.7-x86.fpk",
+              "sha256": "b42e3b5c5b546d0a192202177845abc22ed7aafeb73ae94fa926dc9e7575d45b",
+              "size": 4144634
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20a/wb2api-1.13.7-arm.fpk",
+              "sha256": "d0bae3e3d2b6f6a43f3393710ce71c969bc884a9a41085ffba534408df054855",
+              "size": 3772489
+            }
+          }
+        },
+        "1.13.8": {
+          "changelog": "截断自动续写：上游 finish_reason=length 时同账号同模型续写并拼接为一条连续 SSE，Codex 长输出不再中断（显式 max_tokens 不续）。/v1/messages 与 /v1/responses 的托管 web_search 改由网关代执行。新增积分变动流水、补偿/礼包「先查后领」、错误聚合、模型繁忙度、账号套餐分类、静态 API Key 账号（ck_/pt_）、国际版额度新口径、Webhook 告警与 /admin 补跑审计。",
+          "updated_at": "2026-10-20T07:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20b/wb2api-1.13.8-x86.fpk",
+              "sha256": "704eafb5c2336cec1e6aa665093ade9d6acb2169e5400c94c7e0cab34865f221",
+              "size": 4320839
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20b/wb2api-1.13.8-arm.fpk",
+              "sha256": "8889256bd7f0df4d2a43a3fd71a53e955a165a218aabea8dde876590a11547ca",
+              "size": 3924088
+            }
+          }
+        },
+        "1.13.9": {
+          "changelog": "新增网关默认思考档位（thinking.default_effort / per_model）：客户端未显式带档位时自动注入 reasoning_effort，Codex/Trae 等客户端无需单独设置；显式档位与关闭思考一律尊重不覆盖；面板可热改。含 1.13.8 全部功能（截断续写 / web_search 代执行 / 积分流水 / 补偿面板接口 / 静态 Key 账号 / 告警与审计）。",
+          "updated_at": "2026-10-20T08:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20c/wb2api-1.13.9-x86.fpk",
+              "sha256": "95e9d7afa20e70bc3ee1122314dd601581a14b17891a22d9641463b8757db9de",
+              "size": 4323428
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20c/wb2api-1.13.9-arm.fpk",
+              "sha256": "3e2ed788028cd51e033dde0ee16ab11bd070f386031aa5e94e50a4acc8558550",
+              "size": 3926258
+            }
+          }
         }
       }
     }

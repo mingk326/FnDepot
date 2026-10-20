@@ -10,13 +10,14 @@
 
 ## 当前版本
 
-`1.13.6`
+`1.13.9`
 
-- 修复 `6020 queue.waiting` / `6021 queue.full` 被误判为账号限流，导致整池账号被逐个冻结、其他账号也报 429
-- 跨进程 token 刷新兜底：撞 `12153` 时读回磁盘上已被其它进程刷新的新 refreshToken 重试，修复双进程部署掉登录
-- `11140 request illegal` 由永久禁用账号改为软冷却，不再误杀仍可用的账号
-- 新增任务补领清扫：分钟级幂等 accept / claim，把「进度已达标但没人领」的成长任务奖励补领掉
-- 新增 `WorkBuddy_Valorant`（无畏契约拼豆专家）一键完成
+- **新增网关默认思考档位**：`thinking.default_effort` / `thinking.per_model`，客户端未显式带档位时自动注入，Codex / Trae 等客户端无需单独设置；显式档位与关闭思考不覆盖；面板可热改
+- 截断自动续写：长输出在 `finish_reason=length` 截断时自动续写拼接，Codex 写大文件不再中断
+- `/v1/messages`（Claude Code）与 `/v1/responses`（Codex）的 `web_search` 由网关代执行
+- 新增积分变动流水、补偿 / 礼包面板领取、错误聚合、模型繁忙度、账号套餐分类
+- 支持静态 API Key 账号（`ck_` / `pt_`）、国际版额度新口径、Webhook 告警、`/admin` 手动补跑
+- 更早版本改动见 [Releases](https://github.com/mingk326/FnDepot/releases)（1.13.3 起）
 
 ## 说明
 
