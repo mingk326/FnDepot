@@ -146,6 +146,22 @@
               "size": 3926258
             }
           }
+        },
+        "1.14.0": {
+          "changelog": "新增多 API 密钥体系（config.api_keys）：可新增/编辑/删除多把密钥，每把独立配置默认思考档与按模型覆盖（优先级：客户端显式 > 密钥按模型 > 密钥默认 > 全局 thinking）。面板改为仅管理员密钥可访问，普通密钥只能调用 /v1，/admin 补跑同样要求管理员密钥；旧版 api_key 继续有效且恒为管理员，老配置零迁移。面板配置页新增密钥管理表（脱敏展示，完整密钥仅创建时显示一次）。",
+          "updated_at": "2026-10-20T10:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20d/wb2api-1.14.0-x86.fpk",
+              "sha256": "1ed6dd6f2dfaccde3cc4deea83a044aa79c9807d35974c1302975def63e93a94",
+              "size": 4343710
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20d/wb2api-1.14.0-arm.fpk",
+              "sha256": "99a904764c32706b54cdeec2b8a7d20a310bf39c9be1c4fb2a5bf58cf079dc1a",
+              "size": 3944454
+            }
+          }
         }
       }
     }
