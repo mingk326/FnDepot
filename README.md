@@ -10,15 +10,18 @@
 
 ## 添加应用源
 
-飞牛 OS → 应用中心 → 设置 → 第三方应用源 → 添加源，填入下面任一地址：
+飞牛 OS → 应用中心 → 设置 → 第三方应用源 → 添加源，填入**仓库地址**：
+
+```
+https://github.com/mingk326/FnDepot
+```
+
+客户端会自己去拉取默认分支（`main`）根目录下的 `fnpack.json`，无需填清单文件的直链——这也是社区第三方源通用的填写方式（约定：仓库必须公开、仓库名严格叫 `FnDepot`、清单放在默认分支根目录）。
+
+如果客户端版本不接受仓库地址，可改用清单直链（二选一）：
 
 ```
 https://raw.githubusercontent.com/mingk326/FnDepot/main/fnpack.json
-```
-
-国内网络访问 raw.githubusercontent.com 不稳定时，可用 jsDelivr：
-
-```
 https://cdn.jsdelivr.net/gh/mingk326/FnDepot@main/fnpack.json
 ```
 
