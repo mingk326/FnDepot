@@ -162,6 +162,22 @@
               "size": 3944454
             }
           }
+        },
+        "1.14.1": {
+          "changelog": "新增单号旅行端点 POST /panel/api/accounts/{uid}/travel：单号推进一趟（无猫领养 / 有猫派出或领奖），不带号间限速，供外部调度器实现「每号独立随机时点 + 随机间隔」，规避固定 800ms 全池节拍指纹（issue #227）。面板账号行新增「旅行」按钮（仅 CN 个人账号）；按号旅行与任务中心共用账号级互斥，避免并发重复派出。",
+          "updated_at": "2026-10-20T11:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20e/wb2api-1.14.1-x86.fpk",
+              "sha256": "882f1a14e4de4d81e7e0e43a34ed30697fb76af9f049b282a59b86e10a19da38",
+              "size": 4346011
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20e/wb2api-1.14.1-arm.fpk",
+              "sha256": "e416cbacd5f33239382a62577065cd64b0c2c30072523058652cfaf2476a95df",
+              "size": 3945384
+            }
+          }
         }
       }
     }
