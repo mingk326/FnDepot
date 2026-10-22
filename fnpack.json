@@ -178,6 +178,22 @@
               "size": 3945384
             }
           }
+        },
+        "1.15.0": {
+          "changelog": "请求流水行新增思考档位溯源 effort=...（max->high / gw:max->high），一眼区分「客户端没发」与「网关按模型降级」。新增 upstream.dump_dir：出站请求体与上游原始 SSE 旁路落盘（单文件 8MB 封顶、默认关闭），便于排查上游 400 / 工具调用异常。新增账号级摊开 schedule.account_spread_minutes：排程触发的签到/旅行/活跃/保活按号在窗口内随机偏移执行，不再整点齐发（默认关闭）。新增 POST /v2/chat/busy：官方客户端模型忙闲预检，本地按池状态返回 idle/busy/unknown。",
+          "updated_at": "2026-10-22T06:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20f/wb2api-1.15.0-x86.fpk",
+              "sha256": "16e5aca3a16ea06c2b988bc611c279d282909fb2f260f0267eb20a988418a516",
+              "size": 4357443
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20f/wb2api-1.15.0-arm.fpk",
+              "sha256": "490c31a6ef23d96803609b46a3a117fa4652a6d28f8f221b0d45616e8401d561",
+              "size": 3958721
+            }
+          }
         }
       }
     }
