@@ -274,6 +274,22 @@
               "size": 3977266
             }
           }
+        },
+        "1.15.6": {
+          "changelog": "面板防爆破：鉴权失败一次即按客户端 IP 锁定 1 小时，期间即使携带正确密钥也返回 429（too_many_attempts，Retry-After 为剩余秒数），密钥门直接显示还需等待多少分钟。客户端 IP 依次取 CF-Connecting-IP → X-Real-IP → X-Forwarded-For 首段 → TCP 对端；锁定状态仅存内存、进程重启清空，锁定表上限 4096 条防止伪造头把内存撑爆。",
+          "updated_at": "2026-10-23T12:20:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20l/wb2api-1.15.6-x86.fpk",
+              "sha256": "1938357bc05afa49ac5e596ffa324608c9287a186288cedcb02e7dea8afb1dd2",
+              "size": 4383769
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20l/wb2api-1.15.6-arm.fpk",
+              "sha256": "4b30705fbecdbbe6d60057776d205abc23b8f601cc6a7eb7eced6898be6a42f6",
+              "size": 3981342
+            }
+          }
         }
       }
     }

@@ -10,8 +10,9 @@
 
 ## 当前版本
 
-`1.15.5`
+`1.15.6`
 
+- **面板防爆破**：鉴权失败**一次**即按客户端 IP 锁定 **1 小时**；锁定期内即使携带正确密钥也返回 `429`（`too_many_attempts`，`Retry-After` 为剩余秒数），密钥门直接显示还需等待多少分钟。客户端 IP 依次取 `CF-Connecting-IP` → `X-Real-IP` → `X-Forwarded-For` 首段 → TCP 对端；锁定状态仅存内存、进程重启清空，锁定表上限 4096 条
 - **请求记录覆盖三个协议入口**：`/v1/chat/completions`、`/v1/messages`（Claude Code）、`/v1/responses`（Codex）都会写入请求记录，共用模型 / 账号 / 耗时 / token / 档位字段
 - **请求记录新增「密钥」列**：记录命中的 `key_id` / `key_name`，面板显示备注名（无名称回落 ID），搜索支持按密钥名/ID 过滤；不记录密钥明文或掩码，401 与旧归档显示 `—`
 - **密钥级每日配额**（`api_keys[].daily_token_limit` / `daily_request_limit`）：按 CST 自然日统计，Token = 输入+输出；超限返回 429 `insufficient_quota` + `Retry-After`（到次日 00:00），不选号、不打上游。计数落盘 `key-usage.json`，重启不丢；面板密钥表显示今日已用/上限，表单可设置，保存后热生效；旧版 `config.api_key` 不参与配额
