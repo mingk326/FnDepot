@@ -10,8 +10,10 @@
 
 ## 当前版本
 
-`1.15.1`
+`1.15.2`
 
+- **密钥级可用模型白名单**（`api_keys[].allowed_models`）：留空 = 不限制；裸名对 cn / global 两个域都生效，`cn:` / `global:` 前缀只限定该域。名单外模型直接 403 `model_not_allowed`（不选号、不打上游），`/v1/models` 只返回名单内模型，`/v2/chat/busy` 回 `unknown`，`pool.model_fallback` 的降级目标同样受校验；admin 密钥同样受限。面板密钥表单支持从上游模型目录勾选或手填，保存后热生效
+- **请求记录「档位」列**：`max->xhigh`（客户端发 max 被降级）/ `gw:max->xhigh`（网关注入后被降级）/ `high`（一致），与 stdout 流水行 `effort=` 同源，旧归档无该字段显示 `—`
 - **模型级降级**（`pool.model_fallback`）：上游 6004 / 14003 模型级限流时，同账号自动切到等价模型重试，不再直接失败；冷却仍记在原模型名下
 - **品牌词作用域**（`features.sanitize_brand_scope`）：`DeepSeek Harness` 改写可选 `all`（默认）/ `identity`（只洗 system / developer，不改用户历史），面板可热改
 - **DeepSeek Search 兼容**：DSH 客户端搜索结果补齐 `date` / `title` / `snippet` 空字段，避免客户端解析失败

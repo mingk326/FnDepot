@@ -210,6 +210,22 @@
               "size": 3963130
             }
           }
+        },
+        "1.15.2": {
+          "changelog": "面板「请求记录」新增「档位」列：max->xhigh 表示客户端发 max 被降级、gw:max->xhigh 表示网关按密钥/全局配置注入后被降级、high 表示一致，与 stdout 流水行 effort= 同源。新增 api_keys[].allowed_models 密钥级可用模型白名单：留空 = 不限制；裸名对 cn / global 两个域都生效，cn:/global: 前缀只限定该域。名单外模型直接 403 model_not_allowed（不选号、不打上游、不扣额度），/v1/models 只返回名单内模型，/v2/chat/busy 对名单外模型回 unknown；pool.model_fallback 的降级目标也必须在名单内。admin 密钥同样受限，旧版 config.api_key 恒不限制。面板密钥表单支持从上游模型目录勾选或手填，保存后热生效。",
+          "updated_at": "2026-10-23T08:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20h/wb2api-1.15.2-x86.fpk",
+              "sha256": "d7818612ac6a57758fb8eab238a507e48a28a23adc77e81cbf1973df4f773b1f",
+              "size": 4368964
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20h/wb2api-1.15.2-arm.fpk",
+              "sha256": "72a3579b19f34f9cf17c73a10bdcc3f62efe932685cc2970ee03f88ae7e60149",
+              "size": 3968238
+            }
+          }
         }
       }
     }
