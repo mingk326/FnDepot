@@ -226,6 +226,22 @@
               "size": 3968238
             }
           }
+        },
+        "1.15.3": {
+          "changelog": "可观测性改进：密钥模型白名单拒绝的请求现在会带上完整上下文。请求记录（JSONL 归档 / 面板「请求记录」）与 stdout 流水行不再出现 model=null 的无上下文 403——被拒请求会记录客户端请求的模型名、403 状态与客户端档位（若带）；出图请求的白名单拒绝、下架模型、域路由不匹配也会留下带模型名的流水行。",
+          "updated_at": "2026-10-23T09:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20i/wb2api-1.15.3-x86.fpk",
+              "sha256": "a3a290a4a38b5ddb92f0bcfcfa01d5a60e85f6682c5fdf2d5060279d2f01f54b",
+              "size": 4368867
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20i/wb2api-1.15.3-arm.fpk",
+              "sha256": "eab37dc42c3e8a06b2b17140293752d1ad8c645e76c52a8bb39f50f8e3d1d651",
+              "size": 3968312
+            }
+          }
         }
       }
     }
