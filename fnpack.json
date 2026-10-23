@@ -290,6 +290,22 @@
               "size": 3981342
             }
           }
+        },
+        "1.15.7": {
+          "changelog": "密钥级新增每分钟请求数（RPM）与并发请求上限：RPM 按滑动 60 秒窗口统计，并发按在途请求（流式到最后一帧才结束）统计，两者都覆盖 chat / messages / responses 与出图；超限返回 429 rate_limit_exceeded 并带 Retry-After，不选号、不打上游，被拒请求不消耗每日请求数。新增 api_keys[].rpm_limit 与 api_keys[].max_concurrency（0 = 不限制，热生效）；面板密钥表单可设置，密钥列表「今日用量 / 配额」列实时显示 rpm 与并发占用。计数仅存内存，重启清零。",
+          "updated_at": "2026-10-23T12:40:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20m/wb2api-1.15.7-x86.fpk",
+              "sha256": "ad0b02c968bba78bfda918cd948593d552fb166243bb21420464cf74bda85e38",
+              "size": 4387539
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20m/wb2api-1.15.7-arm.fpk",
+              "sha256": "e1a48b06fa8de2f0f33690324a00d144571faa8c5099ffbffc0387f150c3897b",
+              "size": 3985560
+            }
+          }
         }
       }
     }
