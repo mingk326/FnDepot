@@ -242,6 +242,22 @@
               "size": 3968312
             }
           }
+        },
+        "1.15.4": {
+          "changelog": "新增密钥级每日配额：api_keys[].daily_token_limit（每日 Token 上限，输入+输出）与 api_keys[].daily_request_limit（每日模型请求数上限），按 CST 自然日计数，0 = 不限制。超限返回 429 insufficient_quota 并带 Retry-After（到次日 00:00），不选号、不打上游、不扣额度。计数落盘 state 同目录 key-usage.json（防抖 15s + 退出刷盘），重启不丢；Token 只累计上游观测到的 usage，请求数在通过配额检查时累计（被上游拒绝的请求也算）。面板密钥表新增「今日用量 / 配额」列，编辑表单可设置两项上限，保存后热生效；旧版 config.api_key 不参与配额。",
+          "updated_at": "2026-10-23T11:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20j/wb2api-1.15.4-x86.fpk",
+              "sha256": "d87b43ea29a35dcf2343b727509b51f9820b73b2e7a9053b034feab332548eac",
+              "size": 4377549
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20j/wb2api-1.15.4-arm.fpk",
+              "sha256": "56833661996a98322fbe2adaeb1e61874b0759d11e390246b4aceeff49e9e5ce",
+              "size": 3976408
+            }
+          }
         }
       }
     }
