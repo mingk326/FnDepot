@@ -194,6 +194,22 @@
               "size": 3958721
             }
           }
+        },
+        "1.15.1": {
+          "changelog": "新增 pool.model_fallback：模型级限流（6004/14003）时同账号自动切到等价模型重试，不再直接失败，冷却仍记在原模型名下。新增 features.sanitize_brand_scope：品牌词（DeepSeek Harness）改写作用域可选 all / identity，identity 只洗 system/developer，不改用户历史。DeepSeek Search 兼容：DSH 客户端搜索结果补齐 date/title/snippet 空字段。多模态图片检测修正：content 数组里的 image part 正确识别为图片请求。出图目录更新：hunyuan-image-alpha/-edit 路由到 CN、hy-image-3.5 路由到 global，gpt-image-2.5-sunburst 下架并提示改用 hy-image-3.5。修复账号级摊开在账号多时塌缩到少数时刻的问题（按计划时刻升序遍历）。",
+          "updated_at": "2026-10-23T06:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20g/wb2api-1.15.1-x86.fpk",
+              "sha256": "e9ebef4cf0151f6c6065dc20e5f2e205155f4b05d267dc019a73877b97b71d96",
+              "size": 4362350
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20g/wb2api-1.15.1-arm.fpk",
+              "sha256": "2feb5ea60ba3d2c43c6e6460ce73acbb68d0c607ef6a820982b2157c03911641",
+              "size": 3963110
+            }
+          }
         }
       }
     }

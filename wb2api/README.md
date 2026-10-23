@@ -10,8 +10,14 @@
 
 ## 当前版本
 
-`1.15.0`
+`1.15.1`
 
+- **模型级降级**（`pool.model_fallback`）：上游 6004 / 14003 模型级限流时，同账号自动切到等价模型重试，不再直接失败；冷却仍记在原模型名下
+- **品牌词作用域**（`features.sanitize_brand_scope`）：`DeepSeek Harness` 改写可选 `all`（默认）/ `identity`（只洗 system / developer，不改用户历史），面板可热改
+- **DeepSeek Search 兼容**：DSH 客户端搜索结果补齐 `date` / `title` / `snippet` 空字段，避免客户端解析失败
+- **多模态图片检测修正**：`content` 数组里的 image part 正确识别为图片请求
+- **出图目录更新**：`hunyuan-image-alpha` / `-edit` 路由到 CN，`hy-image-3.5` 路由到 global；`gpt-image-2.5-sunburst` 下架并提示改用 `hy-image-3.5`
+- **账号级摊开修复**：账号多时不再塌缩到少数时刻（按计划时刻升序遍历）
 - **思考档位溯源日志**：请求流水行新增 `effort=max->high` / `gw:max->high`，一眼区分「客户端没发档位」与「网关按模型降级」
 - **上游报文 dump**（`upstream.dump_dir`，默认关闭）：出站请求体 + 上游原始 SSE 旁路落盘，排障上游 400 / 工具调用异常
 - **账号级摊开**（`schedule.account_spread_minutes`，默认关闭）：排程触发的签到 / 旅行 / 活跃 / 保活按号在窗口内随机偏移执行，不再整点齐发
