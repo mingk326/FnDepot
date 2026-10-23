@@ -258,6 +258,22 @@
               "size": 3976408
             }
           }
+        },
+        "1.15.5": {
+          "changelog": "请求记录新增「密钥」列：归档事件保存命中的 key_id 与 key_name，面板显示备注名（无名称回落 ID），搜索支持按密钥名/ID 过滤；不记录密钥明文或掩码，无效密钥（401）与旧归档显示 —。请求记录覆盖三个协议入口：/v1/chat/completions、/v1/messages（Claude Code）与 /v1/responses（Codex）不再只有 OpenAI 兼容入口才有记录，三者共用同一套模型/账号/耗时/token/档位/密钥字段。",
+          "updated_at": "2026-10-23T12:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20k/wb2api-1.15.5-x86.fpk",
+              "sha256": "78d9b99e786e5897ee18b25be4830f30d9b4103ac13e54ceaed97085f59c1d73",
+              "size": 4378561
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20k/wb2api-1.15.5-arm.fpk",
+              "sha256": "dad7c8e09c2da0c64c2167062de7814419a880c06bf0a41392994b5c2947f268",
+              "size": 3977266
+            }
+          }
         }
       }
     }

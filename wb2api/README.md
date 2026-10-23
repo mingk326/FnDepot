@@ -10,8 +10,10 @@
 
 ## 当前版本
 
-`1.15.4`
+`1.15.5`
 
+- **请求记录覆盖三个协议入口**：`/v1/chat/completions`、`/v1/messages`（Claude Code）、`/v1/responses`（Codex）都会写入请求记录，共用模型 / 账号 / 耗时 / token / 档位字段
+- **请求记录新增「密钥」列**：记录命中的 `key_id` / `key_name`，面板显示备注名（无名称回落 ID），搜索支持按密钥名/ID 过滤；不记录密钥明文或掩码，401 与旧归档显示 `—`
 - **密钥级每日配额**（`api_keys[].daily_token_limit` / `daily_request_limit`）：按 CST 自然日统计，Token = 输入+输出；超限返回 429 `insufficient_quota` + `Retry-After`（到次日 00:00），不选号、不打上游。计数落盘 `key-usage.json`，重启不丢；面板密钥表显示今日已用/上限，表单可设置，保存后热生效；旧版 `config.api_key` 不参与配额
 - **403 可观测性**：被密钥模型白名单拒绝的请求，现在会在请求记录与 stdout 流水行里带上**请求模型名**、403 状态与客户端档位（若带），不再出现 `model=null` 的无上下文 403；出图请求的白名单拒绝 / 下架模型 / 域路由不匹配也会留下带模型名的流水行
 - **密钥级可用模型白名单**（`api_keys[].allowed_models`）：留空 = 不限制；裸名对 cn / global 两个域都生效，`cn:` / `global:` 前缀只限定该域。名单外模型直接 403 `model_not_allowed`（不选号、不打上游），`/v1/models` 只返回名单内模型，`/v2/chat/busy` 回 `unknown`，`pool.model_fallback` 的降级目标同样受校验；admin 密钥同样受限。面板密钥表单支持从上游模型目录勾选或手填，保存后热生效
