@@ -354,6 +354,22 @@
               "size": 4013291
             }
           }
+        },
+        "1.16.1": {
+          "changelog": "修复移动端排版：宽表保留列宽，中文不再被压成竖排；恢复整页滚动；账号卡片改为稳定两行网格；统计条改两列并让积分总额独占整行；区块标题独占一行；移除遮挡余额的悬浮按钮，改为账号池顶栏「添加账号」；详情按钮保持两列，日志英文不再拆词。",
+          "updated_at": "2026-10-24T01:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20q/wb2api-1.16.1-x86.fpk",
+              "sha256": "f4e77b36c4b0048a889bf4626709357d3e94c303dc6dbe4d4365ead394f7a69f",
+              "size": 4421449
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20q/wb2api-1.16.1-arm.fpk",
+              "sha256": "66a22d36afa71705a28534403e5f946d6fb2d18f57aea0e1b8d5e81c2466f9bd",
+              "size": 4014070
+            }
+          }
         }
       }
     }
