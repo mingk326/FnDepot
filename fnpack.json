@@ -370,6 +370,22 @@
               "size": 4014070
             }
           }
+        },
+        "1.16.2": {
+          "changelog": "修复账号冷却自然到期后仍显示旧「429 rate limit」标签：状态接口现在只在冷却截止时间仍在未来或账号已禁用时返回 reason，冷却结束即不再透出；禁用原因与熔断展示不受影响，并补充冷却中、到期、禁用三种状态的回归测试。",
+          "updated_at": "2026-10-24T02:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20r/wb2api-1.16.2-x86.fpk",
+              "sha256": "3971ef2e83118ef1031bf9a34a7f93f697f986e431a70b8aaf6d83108627c1f5",
+              "size": 4421475
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20r/wb2api-1.16.2-arm.fpk",
+              "sha256": "8a4283ff080277f1d6080a356674f0853f653b9df834987daaac8ba573376c4b",
+              "size": 4013918
+            }
+          }
         }
       }
     }
