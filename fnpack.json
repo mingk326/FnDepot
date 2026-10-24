@@ -322,6 +322,22 @@
               "size": 3999228
             }
           }
+        },
+        "1.15.9": {
+          "changelog": "模型与账号池治理对齐：models.aliases 模型映射（裸名两域、cn:/global: 分域、值可跨域；映射在黑名单前，出站/选号/账本用真实名，响应 model 回显原发名，热生效）；pool.reserve_credits 保留积分硬保底（余额已知且 ≤ 阈值时停止接单，所有模型；充值/签到自动恢复，默认 0 关闭，credits_known 落盘）；账号 × 模型手动开关（面板「模型」按钮，手动优先，稀疏持久化 state.json model_off，账号列显示关闭数量）；cn.chat_base 国内版 base 覆盖逃生门。",
+          "updated_at": "2026-10-23T14:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20o/wb2api-1.15.9-x86.fpk",
+              "sha256": "1b1573711985740c504f809ddfe0a5f1a71220a31136159f1e47d9f28f9bc0bf",
+              "size": 4413087
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20o/wb2api-1.15.9-arm.fpk",
+              "sha256": "bce3ac02c85377393663ef80abc5d68fa420dfcfd18e039d5d74ab65f3932a55",
+              "size": 4005758
+            }
+          }
         }
       }
     }

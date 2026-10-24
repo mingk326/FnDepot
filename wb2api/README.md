@@ -10,8 +10,12 @@
 
 ## 当前版本
 
-`1.15.8`
+`1.15.9`
 
+- **`models.aliases` 模型映射**：`["claude-opus-4=glm-5.2"]`；裸名两域、`cn:` / `global:` 分域、值可跨域；映射在黑名单之前（不能绕过 `models.hidden`），出站/选号/账本用真实名、响应 `model` 回显原发名，热生效
+- **`pool.reserve_credits` 保留积分**：余额已知且 ≤ 阈值时停止接单（所有模型），充值/签到回血自动恢复；默认 `0` 关闭
+- **账号 × 模型手动开关**：面板账号行「模型」按钮，手动优先、自动恢复不会重新打开；稀疏持久化 `state.json` 的 `model_off`
+- **`cn.chat_base`**：国内版上游 base 覆盖逃生门（改动需重启）
 - **空回复救援**：思考吃光 `max_tokens`、`finish_reason=length` 且正文 0 字节时，同预算关思考重发一次，客户端直接看到正文
 - **`POST /v1/fetch`**：DSH Fetch API 兼容（`{"url":"..."}` → `{"content":"<markdown>"}`）
 - **`models.hidden`**：全局模型黑名单，裸名两域都藏、`cn:` / `global:` 只藏该域；列表不列、chat / 出图点名 400 `model_unavailable`，热生效
