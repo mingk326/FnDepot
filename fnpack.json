@@ -338,6 +338,22 @@
               "size": 4005758
             }
           }
+        },
+        "1.16.0": {
+          "changelog": "移动端 A 方案原生工作台：底部五栏导航、账号摘要卡片、全屏账号详情和更多功能入口；签到、余额、模型、任务、旅行、解冻、暂停、禁用与移除复用真实面板操作和 API。适配触控与安全区，桌面布局保持不变，静态资源随二进制内嵌发布。",
+          "updated_at": "2026-10-24T00:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20p/wb2api-1.16.0-x86.fpk",
+              "sha256": "ccdca1d24e97ea5d38121addf03b098b4fdc4f382f463e201af2a3642d7916cf",
+              "size": 4420587
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20p/wb2api-1.16.0-arm.fpk",
+              "sha256": "206bbfb2a4a96f6eb0c3474bebecd080fdbcb7a9800ab32ba74bbc022ad8cdbe",
+              "size": 4013291
+            }
+          }
         }
       }
     }
