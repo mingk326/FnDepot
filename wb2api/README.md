@@ -10,8 +10,13 @@
 
 ## 当前版本
 
-`1.15.7`
+`1.15.8`
 
+- **空回复救援**：思考吃光 `max_tokens`、`finish_reason=length` 且正文 0 字节时，同预算关思考重发一次，客户端直接看到正文
+- **`POST /v1/fetch`**：DSH Fetch API 兼容（`{"url":"..."}` → `{"content":"<markdown>"}`）
+- **`models.hidden`**：全局模型黑名单，裸名两域都藏、`cn:` / `global:` 只藏该域；列表不列、chat / 出图点名 400 `model_unavailable`，热生效
+- **11158 模型权限分流**：并入 `(账号, 模型)` 负缓存，reason 与 11102 分开、成功可清除
+- **启动补跑去重**：`task-runs.json` 记录当天已补跑任务，同日多次重启只补一次
 - **密钥级 RPM / 并发限流**：`api_keys[].rpm_limit`（滑动 60 秒）与 `max_concurrency`（在途请求，流式到最后一帧、含出图）；超限 429 `rate_limit_exceeded` + `Retry-After`，不选号、不打上游，被拒请求不消耗每日请求数；`0` = 不限制，热生效，面板可设置并实时显示占用
 - **面板防爆破**：鉴权失败**一次**即按客户端 IP 锁定 **1 小时**；锁定期内即使携带正确密钥也返回 `429`（`too_many_attempts`，`Retry-After` 为剩余秒数），密钥门直接显示还需等待多少分钟。客户端 IP 依次取 `CF-Connecting-IP` → `X-Real-IP` → `X-Forwarded-For` 首段 → TCP 对端；锁定状态仅存内存、进程重启清空，锁定表上限 4096 条
 - **请求记录覆盖三个协议入口**：`/v1/chat/completions`、`/v1/messages`（Claude Code）、`/v1/responses`（Codex）都会写入请求记录，共用模型 / 账号 / 耗时 / token / 档位字段

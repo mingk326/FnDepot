@@ -306,6 +306,22 @@
               "size": 3985560
             }
           }
+        },
+        "1.15.8": {
+          "changelog": "从活跃分支 misakano7545/workbuddy2api-panel 移植 5 项上游兼容与稳定性改进：思考吃光预算的空回复救援（同预算关思考重发一次）；新增 POST /v1/fetch（DSH Fetch API，url → content markdown）；新增 models.hidden 全局模型黑名单（列表不列、chat/出图点名 400 model_unavailable，支持 cn:/global: 分域、热生效）；11158「账号类型无权使用该模型」并入 (账号,模型) 负缓存（reason 与 11102 分开、成功可清除）；启动补跑与 task-runs.json（进程跨过当天时点时补跑一轮，同日多次重启只补一次）。",
+          "updated_at": "2026-10-23T13:40:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20n/wb2api-1.15.8-x86.fpk",
+              "sha256": "da10d3e7d8821c057aaf1ea04b5f5b8e7c3b1ae8cf2d10092e58214d4b68dff5",
+              "size": 4401889
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.20n/wb2api-1.15.8-arm.fpk",
+              "sha256": "99a22f1f686b192b8449074b319ec4a58af694d8ba2832c7ef741b3a0ecb026d",
+              "size": 3999228
+            }
+          }
         }
       }
     }
