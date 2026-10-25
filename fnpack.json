@@ -386,6 +386,22 @@
               "size": 4013918
             }
           }
+        },
+        "1.16.3": {
+          "changelog": "移植上游防误伤修复：网关 401 先用 refresh 求证，refresh 明确失效但 AT 仍有效时不再立即禁用（改为连续 3 次才判死）；全池模型锁按锁因分流——6004/6000 用量配额返回 429 + 上游数字业务码（不带 Retry-After），14003 模型繁忙返回 503 model_busy + Retry-After，11102/11158 仍返回 400 model_unavailable，14003 改用 10 秒起、封顶 1 分钟的独立短冷却；封禁账号新增只读「探活」；登录域表对齐官方 CLI 2.174.0（cn/intl/workbuddy 三站点，国际版上游 base 按账号 domain 自动选择），并尊重客户端 reasoning_effort=off/none/disabled 关闭思考。",
+          "updated_at": "2026-10-25T14:05:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.25a/wb2api-1.16.3-x86.fpk",
+              "sha256": "06e4957e9369be4598d8aae584f70a814ecf13ea298343fa1e24f3cd37dff296",
+              "size": 4435551
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.25a/wb2api-1.16.3-arm.fpk",
+              "sha256": "53916654d5c380cc9b14b4e4df053450720e2acea9c397d6b0fe61a81b219772",
+              "size": 4028338
+            }
+          }
         }
       }
     }
