@@ -10,8 +10,14 @@
 
 ## 当前版本
 
-`1.16.3`
+`1.18.0`
 
+- **同步上游 2026-10-26**：`models.allowed` 模型白名单（裸名两域、`cn:` / `global:` 分域，列表 / chat / 出图 / 容量四生效点，与 `models.hidden` 交集，保存即热生效）；首帧否决——流式首帧是 error 帧或 200 内嵌 `{code,msg}` 失败帧时直接换号，客户端不再看到「200 + error 帧」；12153 连续计数与清零落盘、session touch CAS；请求归档记录 `tools_declared` / `tool_calls`；`/v1/models` 同时接受 `Authorization` 与 `x-api-key`
+- **调度人味化**：`schedule.balance_refresh_jitter_permill` / `task_sweep_jitter_permill`（0–500）给周期间隔加随机抖动并摊开账号遍历；`schedule.night_account_cap` 让夜猫子只由积分最高的前 N 个账号参与；CN 主域切换为官方桌面端 `www.workbuddy.cn`
+- **面板**：新增平均缓存命中率卡、积分与 token 按小时表、请求事件日志大屏（13 列 / 筛选 / 导出）、添加账号授权链接二维码；页面切后台自动暂停轮询、运行日志增量拉取、归档查询按天短路、models 接口 60 秒缓存、全量运维动作防重入；自动刷新间隔可配（`panel.poll_interval_sec`，0 = 5 秒，负值 = 关闭）
+- **移除面板访问防爆破**：鉴权失败只记一行日志并返回 401，不再按 IP 锁定 1 小时；公网部署请依赖反向代理限流与 HTTPS
+- **运维**：空密钥 / `test_key` + 非回环监听启动告警；优雅关停超时可配（`server.shutdown_timeout`，默认 30s）；Fatal 退出前落盘池状态；usage 落盘失败自动重试并上报；Redis 粘性恢复改 SCAN + 分批 MGET
+- **客户端与工具**：登录站点版本对齐官方 CLI 2.176.0，签到幂等判定收窄，登录轮询记日志并在 90 秒后提示 state 可能过期，credit 工具复用 auth/upstream；文档补充 `/v1/messages`（Anthropic 原生协议）示例
 - **上游防误伤修复**：网关 401 先 refresh 求证，refresh 明确失效但 AccessToken 仍有效时不再误杀（改为连续 3 次才禁用）；全池模型锁按锁因分流——6004/6000 用量配额返回 429 + 上游数字业务码（不带 `Retry-After`），14003 模型繁忙返回 503 `model_busy` + `Retry-After`，11102/11158 仍返回 400 `model_unavailable`；14003 冷却改为 10 秒起、封顶 1 分钟
 - **封禁账号「探活」**：账号行 / 移动详情新增只读探活，直接给出「已解封 / 仍被封 / 被风控但会话有效 / 登录失效」结论，不 revive、不改池状态
 - **登录域表对齐官方 CLI 2.174.0**：新增 cn / intl / workbuddy 三站点（面板与 `login.sh --site`），国际版上游 base 按账号 domain 自动选 codebuddy.ai / workbuddy.ai；`reasoning_effort=off/none/disabled` 真正关闭思考
@@ -30,7 +36,7 @@
 - **11158 模型权限分流**：并入 `(账号, 模型)` 负缓存，reason 与 11102 分开、成功可清除
 - **启动补跑去重**：`task-runs.json` 记录当天已补跑任务，同日多次重启只补一次
 - **密钥级 RPM / 并发限流**：`api_keys[].rpm_limit`（滑动 60 秒）与 `max_concurrency`（在途请求，流式到最后一帧、含出图）；超限 429 `rate_limit_exceeded` + `Retry-After`，不选号、不打上游，被拒请求不消耗每日请求数；`0` = 不限制，热生效，面板可设置并实时显示占用
-- **面板防爆破**：鉴权失败**一次**即按客户端 IP 锁定 **1 小时**；锁定期内即使携带正确密钥也返回 `429`（`too_many_attempts`，`Retry-After` 为剩余秒数），密钥门直接显示还需等待多少分钟。客户端 IP 依次取 `CF-Connecting-IP` → `X-Real-IP` → `X-Forwarded-For` 首段 → TCP 对端；锁定状态仅存内存、进程重启清空，锁定表上限 4096 条
+- 历史：1.16.x 曾按 IP 锁定 1 小时，1.18.0 起已移除（见上）
 - **请求记录覆盖三个协议入口**：`/v1/chat/completions`、`/v1/messages`（Claude Code）、`/v1/responses`（Codex）都会写入请求记录，共用模型 / 账号 / 耗时 / token / 档位字段
 - **请求记录新增「密钥」列**：记录命中的 `key_id` / `key_name`，面板显示备注名（无名称回落 ID），搜索支持按密钥名/ID 过滤；不记录密钥明文或掩码，401 与旧归档显示 `—`
 - **密钥级每日配额**（`api_keys[].daily_token_limit` / `daily_request_limit`）：按 CST 自然日统计，Token = 输入+输出；超限返回 429 `insufficient_quota` + `Retry-After`（到次日 00:00），不选号、不打上游。计数落盘 `key-usage.json`，重启不丢；面板密钥表显示今日已用/上限，表单可设置，保存后热生效；旧版 `config.api_key` 不参与配额
