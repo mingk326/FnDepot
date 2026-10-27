@@ -29,10 +29,10 @@ https://cdn.jsdelivr.net/gh/mingk326/FnDepot@main/fnpack.json
 
 ## 直接下载
 
-- [wb2api 1.16.3 x86](https://github.com/mingk326/FnDepot/releases/download/2026.10.25a/wb2api-1.16.3-x86.fpk)
-- [wb2api 1.16.3 arm](https://github.com/mingk326/FnDepot/releases/download/2026.10.25a/wb2api-1.16.3-arm.fpk)
+- [wb2api 1.18.0 x86](https://github.com/mingk326/FnDepot/releases/download/2026.10.27a/wb2api-1.18.0-x86.fpk)
+- [wb2api 1.18.0 arm](https://github.com/mingk326/FnDepot/releases/download/2026.10.27a/wb2api-1.18.0-arm.fpk)
 
-历史版本见 [Releases](https://github.com/mingk326/FnDepot/releases)：1.13.3–1.16.2（每版 x86 / arm）。
+历史版本见 [Releases](https://github.com/mingk326/FnDepot/releases)：1.13.3–1.18.0（每版 x86 / arm）。
 
 安装后面板地址：`http://<NAS-IP>:7863/panel`，模型地址：`http://<NAS-IP>:7863/v1`。面板需**管理员密钥**（安装向导设置的密钥自动为管理员），普通密钥只能调用模型接口。
 
