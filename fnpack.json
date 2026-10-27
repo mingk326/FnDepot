@@ -402,6 +402,22 @@
               "size": 4028338
             }
           }
+        },
+        "1.18.0": {
+          "changelog": "同步上游 2026-10-26 全部改动：新增 models.allowed 模型白名单（列表/chat/出图/容量四生效点，与 models.hidden 交集，热生效）；首帧否决——流式首帧是 error 帧或 200 内嵌 {code,msg} 失败帧时直接换号，客户端不再看到「200 + error 帧」；12153 计数与清零落盘、session touch CAS；请求归档新增 tools_declared / tool_calls 观测；/v1/models 同时接受 Bearer 与 x-api-key；调度人味化（刷新/清扫抖动 + 夜猫子积分 Top-N）与 CN 主域 workbuddy.cn；面板新增平均缓存命中率卡、按小时表、请求事件日志大屏、添加账号二维码，后台暂停轮询、日志增量拉取、归档查询短路、models 短缓存与全量运维防重入，自动刷新间隔可配；移除面板访问防爆破的 1 小时锁定；弱密钥启动告警、优雅关停超时可配、Fatal 落盘、usage 落盘失败自愈、Redis 粘性恢复改分批 MGET；客户端版本对齐 2.176.0，签到幂等判定收窄，登录轮询记日志并提示过期 state，credit 复用 auth/upstream。",
+          "updated_at": "2026-10-27T14:37:42Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.27a/wb2api-1.18.0-x86.fpk",
+              "sha256": "33f51c402c5f57ef4b41ece6032ca18e89a5de5818d68e16f01d391cf4e853a0",
+              "size": 4460201
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.27a/wb2api-1.18.0-arm.fpk",
+              "sha256": "79f63e106cd5556f6a9df7f7f575f966a45806b35aa45c35262d6c48060b8040",
+              "size": 4051796
+            }
+          }
         }
       }
     }
