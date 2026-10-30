@@ -10,8 +10,9 @@
 
 ## 当前版本
 
-`1.18.0`
+`1.19.0`
 
+- **上游协议对齐（P0，2026-10-30）**：出站指纹升级到 WorkBuddy 5.9.3 / CLI 2.165.0（国际版 `workbuddy-ai` 品牌段），billing 改 `axios/1.16.1`；补齐 `x-stainless-*` / `x-agent-*` / `baggage` / `b3` / `traceparent` / `acp-connection-id` / `X-Userinfo` 头族，移除客户端从不发送的 `X-Machine-ID` / `X-Session-ID` / `X-No-*` 与 RPC 层 Origin/Referer；6020/6021 渠道排队恢复请求内轮转、终态 429 + `Retry-After`；工具 schema 归一（enum 缺 type 推断、CN Kimi `$ref` 内联）；realm 前缀剥离、`stop` 字符串转数组、剔除 `reasoning_text` 片段；脱敏补 DSH `@` 路径段与身份句式
 - **同步上游 2026-10-26**：`models.allowed` 模型白名单（裸名两域、`cn:` / `global:` 分域，列表 / chat / 出图 / 容量四生效点，与 `models.hidden` 交集，保存即热生效）；首帧否决——流式首帧是 error 帧或 200 内嵌 `{code,msg}` 失败帧时直接换号，客户端不再看到「200 + error 帧」；12153 连续计数与清零落盘、session touch CAS；请求归档记录 `tools_declared` / `tool_calls`；`/v1/models` 同时接受 `Authorization` 与 `x-api-key`
 - **调度人味化**：`schedule.balance_refresh_jitter_permill` / `task_sweep_jitter_permill`（0–500）给周期间隔加随机抖动并摊开账号遍历；`schedule.night_account_cap` 让夜猫子只由积分最高的前 N 个账号参与；CN 主域切换为官方桌面端 `www.workbuddy.cn`
 - **面板**：新增平均缓存命中率卡、积分与 token 按小时表、请求事件日志大屏（13 列 / 筛选 / 导出）、添加账号授权链接二维码；页面切后台自动暂停轮询、运行日志增量拉取、归档查询按天短路、models 接口 60 秒缓存、全量运维动作防重入；自动刷新间隔可配（`panel.poll_interval_sec`，0 = 5 秒，负值 = 关闭）
