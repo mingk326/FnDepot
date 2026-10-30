@@ -434,6 +434,22 @@
               "size": 4068800
             }
           }
+        },
+        "1.20.0": {
+          "changelog": "上游对齐与稳定性（P0 残项 + P1）：/v3/config 探测 UA 改官方 v3ProbeUA/v3ProbeUALite；桌面端上报指纹按 realm 升级 5.9.3 / 5.8.4；/v2/report 改走 chatBase + 客户端头族；状态落盘接入 safefile（fsync + .bak 回退，掉电/全 0 文件可恢复）；统一 cst UTC+8 自然日（排程时点 / 04:00 硬冷却 / 补跑日期键）；新增 thinking 档位策略（enabled / client_priority / override_scope / model_defaults，热生效）；新增 watchdog 上游目录指纹监控（默认关闭）。全量 build / vet / test 通过。",
+          "updated_at": "2026-10-30T03:20:54Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.30b/wb2api-1.20.0-x86.fpk",
+              "sha256": "cc03ecad7f85aba618ac9e5e66b75fabe1353549fb6c15daa00631b9559354d5",
+              "size": 4497583
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.30b/wb2api-1.20.0-arm.fpk",
+              "sha256": "22fa6418da2929b86c459f3010bf0842ef6fc553a3c0cfdf8df31e9a9de29744",
+              "size": 4084956
+            }
+          }
         }
       }
     }
