@@ -418,6 +418,22 @@
               "size": 4051796
             }
           }
+        },
+        "1.19.0": {
+          "changelog": "上游协议对齐（P0）：出站客户端指纹升级到 WorkBuddy 5.9.3 / CLI 2.165.0（国际版 workbuddy-ai 品牌段），billing 层改 axios；补齐 x-stainless / x-agent / baggage / b3 / traceparent / acp-connection-id / X-Userinfo 等客户端头族，移除客户端从不发的 X-Machine-ID / X-Session-ID / X-No-* 与 RPC 层 Origin/Referer；6020/6021 渠道排队恢复请求内轮转，终态改为 429 + Retry-After（等待值优先取上游 data.retry_after）；工具 schema 归一（enum 缺 type 推断、CN Kimi $ref 内联）；realm 前缀剥离、stop 字符串转数组、剔除 reasoning_text 片段；脱敏补 DSH @ 路径段与身份句式。全量 build / vet / test 通过。",
+          "updated_at": "2026-10-30T01:53:50Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.30a/wb2api-1.19.0-x86.fpk",
+              "sha256": "474bd31e201c356e4364f70c1b3a5cb19bad4d3f51edaf32227c6fea55b22091",
+              "size": 4477685
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.10.30a/wb2api-1.19.0-arm.fpk",
+              "sha256": "90ba37678a98ec9381685d6598895633cd4d1d3c7d6a762e42f086bc65fccfcd",
+              "size": 4068800
+            }
+          }
         }
       }
     }
