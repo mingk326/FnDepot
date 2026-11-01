@@ -450,6 +450,22 @@
               "size": 4084956
             }
           }
+        },
+        "1.20.1": {
+          "changelog": "上游协议对齐（批次 0）：6020 排队带 retry_after 时不再换号重打，直接透传 429 + Retry-After；model_fallback 支持 cn:/global: 域前缀键；续写（continue）usage 的 prompt 取末段、total 重算，避免上下文重复计入；web_search_result 补必填 encrypted_content 与可空 page_age；/v2/report 去掉真机不存在的 12 个字段与 X-Requested-With，无 body 的 POST 发 {}；国际版升 5.9.4（UA / X-IDE-Version / commit / releaseDate），RPC 与 chat UA 分族，X-Private-Data 按发行版取值，baggage 收回 4 键，/v3/config UA 统一两段式。全量 build / vet / test 通过。",
+          "updated_at": "2026-11-01T11:17:11Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.01a/wb2api-1.20.1-x86.fpk",
+              "sha256": "e06015a758070f6a811c8e48b4d52129ff1ecdd9066fe4df306b96c0a29d0b74",
+              "size": 4498658
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.01a/wb2api-1.20.1-arm.fpk",
+              "sha256": "8169ba2a48b9ebc720a3dc6b230491eaa70b64523b7417bb54a0cb86b31741c6",
+              "size": 4085509
+            }
+          }
         }
       }
     }
