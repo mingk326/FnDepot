@@ -466,6 +466,22 @@
               "size": 4085509
             }
           }
+        },
+        "1.21.0": {
+          "changelog": "上游协议指纹整批 + 正确性清理：出站 TLS ClientHello 复刻官方 Node/OpenSSL（JA3+JA4 双对齐，可配 tls_fingerprint=go 回退）；请求头顺序、头名大小写、官方 Connection 头全部对齐真机；Accept-Encoding 四段 + br/gzip/deflate 解码，chat 大 body 改 gzip。删除上游已下架的 4 个任务与夜猫子排程；官方补偿停止每日盲领；body 补轮级 conversationRequestId；global /v2/chat/busy 404 记忆 + 轻头族；/v1/models 追加 models.dev 能力声明；运行日志增量改单调 seq；国际版签到改为先查状态；新增 cn.billing_base 分域配置；新增 /v1/embeddings（默认关闭，features.embeddings_enabled 热生效）。全量 build / vet / test（20 包）通过。",
+          "updated_at": "2026-11-01T19:14:41Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.02a/wb2api-1.21.0-x86.fpk",
+              "sha256": "7802e43c4b15586b540b4d50299b0d10b0d43c31ea68bfe62082a5555642a059",
+              "size": 5121027
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.02a/wb2api-1.21.0-arm.fpk",
+              "sha256": "20c0b904585776ec30f5ff9486040bc2deee74a14061af8a43329d007862a103",
+              "size": 4639295
+            }
+          }
         }
       }
     }
