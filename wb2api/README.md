@@ -10,13 +10,14 @@
 
 ## 当前版本
 
-`1.20.1`
+`1.21.0`
 
+- **上游协议指纹整批（1.21.0，2026-11-02）**：出站 TLS ClientHello 复刻官方 Node/OpenSSL（JA3+JA4 双对齐，`upstream.tls_fingerprint=go` 可回退）；请求头发送顺序、头名大小写、官方 `Connection` 头全部对齐真机；`Accept-Encoding` 四段 + br/gzip/deflate 解码，chat 大 body 改 gzip。删除上游已下架的 4 个任务与夜猫子排程；官方补偿停止每日盲领；body 补轮级 `conversationRequestId`；global `/v2/chat/busy` 404 记忆 + 轻头族；`/v1/models` 追加 models.dev 能力声明；运行日志增量改单调 `seq`；国际版签到改为先查状态；新增 `cn.billing_base` 分域配置；新增 `/v1/embeddings`（默认关闭，`features.embeddings_enabled` 热生效）
 - **上游协议对齐（1.20.1，2026-11-01）**：6020 排队带 `retry_after` 时不再换号重打，直接透传 429 + `Retry-After`；`model_fallback` 支持 `cn:` / `global:` 域前缀键；续写（continue）usage 的 prompt 取末段、total 重算，避免上下文重复计入；`web_search_result` 补必填 `encrypted_content` 与可空 `page_age`；`/v2/report` 去掉真机不存在的 12 个字段与 `X-Requested-With`，无 body 的 POST 发 `{}`；国际版升 5.9.4（UA / `X-IDE-Version` / commit / releaseDate），RPC 与 chat UA 分族，`X-Private-Data` 按发行版取值，`baggage` 收回 4 键，`/v3/config` UA 统一两段式
 - **上游对齐与稳定性（1.20.0，2026-10-30）**：`/v3/config` 探测 UA 改官方 `v3ProbeUA` / `v3ProbeUALite`；桌面端上报指纹按 realm 升级 5.9.3 / 5.8.4（含 commit / releaseDate / qimei36 / cpuModel）；`/v2/report` 改走 chatBase；状态落盘接入 `safefile`（fsync + `.bak` 回退）；统一 `cst` UTC+8 自然日；新增 `thinking.enabled` / `client_priority` / `override_scope` / `model_defaults` 档位策略；新增 `watchdog` 上游目录指纹监控（默认关闭）
 - **上游协议对齐（P0，2026-10-30）**：出站指纹升级到 WorkBuddy 5.9.3 / CLI 2.165.0（国际版 `workbuddy-ai` 品牌段），billing 改 `axios/1.16.1`；补齐 `x-stainless-*` / `x-agent-*` / `baggage` / `b3` / `traceparent` / `acp-connection-id` / `X-Userinfo` 头族，移除客户端从不发送的 `X-Machine-ID` / `X-Session-ID` / `X-No-*` 与 RPC 层 Origin/Referer；6020/6021 渠道排队恢复请求内轮转、终态 429 + `Retry-After`；工具 schema 归一（enum 缺 type 推断、CN Kimi `$ref` 内联）；realm 前缀剥离、`stop` 字符串转数组、剔除 `reasoning_text` 片段；脱敏补 DSH `@` 路径段与身份句式
 - **同步上游 2026-10-26**：`models.allowed` 模型白名单（裸名两域、`cn:` / `global:` 分域，列表 / chat / 出图 / 容量四生效点，与 `models.hidden` 交集，保存即热生效）；首帧否决——流式首帧是 error 帧或 200 内嵌 `{code,msg}` 失败帧时直接换号，客户端不再看到「200 + error 帧」；12153 连续计数与清零落盘、session touch CAS；请求归档记录 `tools_declared` / `tool_calls`；`/v1/models` 同时接受 `Authorization` 与 `x-api-key`
-- **调度人味化**：`schedule.balance_refresh_jitter_permill` / `task_sweep_jitter_permill`（0–500）给周期间隔加随机抖动并摊开账号遍历；`schedule.night_account_cap` 让夜猫子只由积分最高的前 N 个账号参与；CN 主域切换为官方桌面端 `www.workbuddy.cn`
+- **调度人味化**：`schedule.balance_refresh_jitter_permill` / `task_sweep_jitter_permill`（0–500）给周期间隔加随机抖动并摊开账号遍历；CN 主域切换为官方桌面端 `www.workbuddy.cn`
 - **面板**：新增平均缓存命中率卡、积分与 token 按小时表、请求事件日志大屏（13 列 / 筛选 / 导出）、添加账号授权链接二维码；页面切后台自动暂停轮询、运行日志增量拉取、归档查询按天短路、models 接口 60 秒缓存、全量运维动作防重入；自动刷新间隔可配（`panel.poll_interval_sec`，0 = 5 秒，负值 = 关闭）
 - **移除面板访问防爆破**：鉴权失败只记一行日志并返回 401，不再按 IP 锁定 1 小时；公网部署请依赖反向代理限流与 HTTPS
 - **运维**：空密钥 / `test_key` + 非回环监听启动告警；优雅关停超时可配（`server.shutdown_timeout`，默认 30s）；Fatal 退出前落盘池状态；usage 落盘失败自动重试并上报；Redis 粘性恢复改 SCAN + 分批 MGET
