@@ -482,6 +482,22 @@
               "size": 4639295
             }
           }
+        },
+        "1.22.0": {
+          "changelog": "流式链路修复：心跳注释帧补帧分隔（修 GLM 工具调用首帧被吞、completed.output=null）；流式 Close 前读掉流尾并幂等（上游连接可复用）；客户端断开归因不再误报上游断流且不再白发续写；请求日志单行超限只丢该行，不再整页 500。思考档位降级跳过 off（不再静默关思考）；新增 /v1/messages/count_tokens 本地估算；模型别名支持 * / ? 通配；面板鉴权改为默认拒绝（未注册路径 401）；cockpit 导入保留 enterprise_id 并在企业号导入时跳过签到。",
+          "updated_at": "2026-11-04T07:14:47Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.04a/wb2api-1.22.0-x86.fpk",
+              "sha256": "322416526bddee5415ee0c6289cd01a7a677afd0d6b92fb4df3aaf9e235dcf64",
+              "size": 5122091
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.04a/wb2api-1.22.0-arm.fpk",
+              "sha256": "af16c2271133f0b34ba82187d182e9307ea0e0dc317d3a3ca6e179172334bd6b",
+              "size": 4640739
+            }
+          }
         }
       }
     }

@@ -10,8 +10,9 @@
 
 ## 当前版本
 
-`1.21.0`
+`1.22.0`
 
+- **流式链路与面板加固（1.22.0，2026-11-04）**：上游心跳注释帧补帧分隔，修 GLM 工具调用首帧被吞（`completed.output=null`）；流式 `Close` 前限时读掉流尾并幂等，上游连接可复用；客户端断开归因与续写门禁，不再误报「上游断流」、不再白发续写；请求日志单行超 16MB 只丢该行，不再整页 500。思考档位降级跳过 `off`（不再静默关闭思考）；新增 `/v1/messages/count_tokens` 本地估算；模型别名支持 `*` / `?` 通配；面板鉴权改为默认拒绝（未注册路径 401）；cockpit 导入保留 `enterprise_id` / `enterpriseId`，企业号导入跳过签到。
 - **上游协议指纹整批（1.21.0，2026-11-02）**：出站 TLS ClientHello 复刻官方 Node/OpenSSL（JA3+JA4 双对齐，`upstream.tls_fingerprint=go` 可回退）；请求头发送顺序、头名大小写、官方 `Connection` 头全部对齐真机；`Accept-Encoding` 四段 + br/gzip/deflate 解码，chat 大 body 改 gzip。删除上游已下架的 4 个任务与夜猫子排程；官方补偿停止每日盲领；body 补轮级 `conversationRequestId`；global `/v2/chat/busy` 404 记忆 + 轻头族；`/v1/models` 追加 models.dev 能力声明；运行日志增量改单调 `seq`；国际版签到改为先查状态；新增 `cn.billing_base` 分域配置；新增 `/v1/embeddings`（默认关闭，`features.embeddings_enabled` 热生效）
 - **上游协议对齐（1.20.1，2026-11-01）**：6020 排队带 `retry_after` 时不再换号重打，直接透传 429 + `Retry-After`；`model_fallback` 支持 `cn:` / `global:` 域前缀键；续写（continue）usage 的 prompt 取末段、total 重算，避免上下文重复计入；`web_search_result` 补必填 `encrypted_content` 与可空 `page_age`；`/v2/report` 去掉真机不存在的 12 个字段与 `X-Requested-With`，无 body 的 POST 发 `{}`；国际版升 5.9.4（UA / `X-IDE-Version` / commit / releaseDate），RPC 与 chat UA 分族，`X-Private-Data` 按发行版取值，`baggage` 收回 4 键，`/v3/config` UA 统一两段式
 - **上游对齐与稳定性（1.20.0，2026-10-30）**：`/v3/config` 探测 UA 改官方 `v3ProbeUA` / `v3ProbeUALite`；桌面端上报指纹按 realm 升级 5.9.3 / 5.8.4（含 commit / releaseDate / qimei36 / cpuModel）；`/v2/report` 改走 chatBase；状态落盘接入 `safefile`（fsync + `.bak` 回退）；统一 `cst` UTC+8 自然日；新增 `thinking.enabled` / `client_priority` / `override_scope` / `model_defaults` 档位策略；新增 `watchdog` 上游目录指纹监控（默认关闭）
