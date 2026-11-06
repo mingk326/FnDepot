@@ -498,6 +498,22 @@
               "size": 4640739
             }
           }
+        },
+        "1.22.1": {
+          "changelog": "修正 1.22.0 的客户端断开判定：只看客户端自己的请求 ctx，上游空闲看门狗掐断仍按上游断流处理（恢复截断终态与一次盲重试）。工具描述 tools[].function.description 纳入出站脱敏；/v1/search 对 DSH 把空 url 卡片改写为等价检索链接并同步条数；面板首页轮询载荷未变时不再重建账号表/锁池表；单号签到响应回显账号真实 realm。",
+          "updated_at": "2026-11-07T00:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.07a/wb2api-1.22.1-x86.fpk",
+              "sha256": "03f8c92c90b0227385ec1fa749c1a09621306990a90def314b9ae6bb9b7140ed",
+              "size": 5123880
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.07a/wb2api-1.22.1-arm.fpk",
+              "sha256": "caa3a80396daca2f0ff3c2f0864cd801d5e73a96f8bbc93a1d7e1d0b4c7383e4",
+              "size": 4642428
+            }
+          }
         }
       }
     }
