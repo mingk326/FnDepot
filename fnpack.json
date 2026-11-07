@@ -557,19 +557,19 @@
             }
           }
         },
-        "2.11.11": {
-          "changelog": "内置上游改监听 127.0.0.1:7865，不再与既有 wb2api 争 7863；启动时自动检测同机已有 wb2api（/vol*/@appdata/wb2api），命中则直接接管其账号目录与 config.json，面板立即显示原有账号，且不重复启动第二个网关。未检测到旧实例时使用自带网关（7865）。",
-          "updated_at": "2026-11-07T12:00:00Z",
+        "2.11.12": {
+          "changelog": "仅端口调整：自带上游改监听 127.0.0.1:7865，不再与既有 wb2api 的 7863 冲突。面板端口不变（安装时可改）。其余行为与 2.11.10 一致。",
+          "updated_at": "2026-11-07T13:00:00Z",
           "packages": {
             "x86": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.08/wb2mgr-2.11.11-x86.fpk",
-              "sha256": "d2c606e00adbef145a88e0ebb750cccb290402d0f6397d0bc4242b24ec158de8",
-              "size": 61653020
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.09/wb2mgr-2.11.12-x86.fpk",
+              "sha256": "2d44c36a289d36f6a737dba7281049209710e2c7486bd38bf7dc6d1e6291ff39",
+              "size": 61651998
             },
             "arm": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.08/wb2mgr-2.11.11-arm.fpk",
-              "sha256": "8bad632703103d1cb15bb52ed87b64229ce38f0ba71b6a747864927a07040108",
-              "size": 55172722
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.09/wb2mgr-2.11.12-arm.fpk",
+              "sha256": "2f7774590337c56ae75c0d74fcd00ce50b4c7f2872decc88fa8f75d8244895d4",
+              "size": 55169470
             }
           }
         }
