@@ -572,6 +572,22 @@
               "size": 55231828
             }
           }
+        },
+        "2.11.12": {
+          "changelog": "原生环境保存上游配置后，自动重启自带网关并探测就绪，按实际结果提示；启停与巡检互斥，避免重复拉起。只作用于 wbmgr 自带上游 127.0.0.1:7865。",
+          "updated_at": "2026-11-07T13:10:39Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.15/wb2mgr-2.11.12-x86.fpk",
+              "sha256": "d7bb882be6e3f1f141245a70d4e979feb06fcfacf9c4a9de72373751b9e23ebb",
+              "size": 61707174
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.15/wb2mgr-2.11.12-arm.fpk",
+              "sha256": "450e8c0f5ce24216a1e2b69edad9a841403c3ffb062e300790c1f6bdafbc70ba",
+              "size": 55229648
+            }
+          }
         }
       }
     }
