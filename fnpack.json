@@ -572,6 +572,22 @@
               "size": 55169470
             }
           }
+        },
+        "2.11.13": {
+          "changelog": "补内置上游 scripts（task_runner / task_common / school_open_day_2026 等 9 个文件），修复「每日领奖」提示未找到上游任务脚本；首次启动自动同步到数据目录，重装后不再复现。其余行为与 2.11.12 一致（自带网关 127.0.0.1:7865）。",
+          "updated_at": "2026-11-07T14:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.10/wb2mgr-2.11.13-x86.fpk",
+              "sha256": "1b7d148df75cad3e3aee292869af53fb71ee883508bcf4373110dc193a9889b8",
+              "size": 61710227
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.10/wb2mgr-2.11.13-arm.fpk",
+              "sha256": "67f5354b1fe2beff9b1f94da92ecbf37f3dfb212f03cf799be6a4a1ffa989cbc",
+              "size": 55226763
+            }
+          }
         }
       }
     }
