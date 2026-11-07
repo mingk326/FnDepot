@@ -557,19 +557,19 @@
             }
           }
         },
-        "2.11.10-1": {
-          "changelog": "版本号改为 2.11.10-1，便于应用中心识别为升级；内容与 2.11.10 相同：上游掉线自愈（30 秒巡检自动拉起）、内置 upstream-scripts、自带上游监听 127.0.0.1:7865。",
-          "updated_at": "2026-11-07T17:45:00Z",
+        "2.11.11": {
+          "changelog": "版本号改为 2.11.11，便于应用中心识别升级；内容与 2.11.10 相同：上游掉线自愈（30 秒巡检自动拉起）、内置 upstream-scripts、自带上游监听 127.0.0.1:7865。",
+          "updated_at": "2026-11-07T18:00:00Z",
           "packages": {
             "x86": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.13/wb2mgr-2.11.10-1-x86.fpk",
-              "sha256": "ccff0e8ad66642c8975ac6935308cddc34453e663096d97c4eabe9f54f1cc48a",
-              "size": 61705535
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.14/wb2mgr-2.11.11-x86.fpk",
+              "sha256": "93d473f3fd0dd309ebe9ed18c8f3e5925e4ea8bcd674b378ed74a56511cd5a12",
+              "size": 61705589
             },
             "arm": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.13/wb2mgr-2.11.10-1-arm.fpk",
-              "sha256": "c5f8a1251d143dabf6080dbde1fc622bec8680d176f04b2a26b5adbc4b6d6103",
-              "size": 55231847
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.14/wb2mgr-2.11.11-arm.fpk",
+              "sha256": "eed4420d9da0187fef7acaa85f3401d8b6a1bcb079deb864dcd28d3942bf12c3",
+              "size": 55231828
             }
           }
         }
