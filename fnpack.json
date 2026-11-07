@@ -556,6 +556,22 @@
               "size": 55169492
             }
           }
+        },
+        "2.11.11": {
+          "changelog": "内置上游改监听 127.0.0.1:7865，不再与既有 wb2api 争 7863；启动时自动检测同机已有 wb2api（/vol*/@appdata/wb2api），命中则直接接管其账号目录与 config.json，面板立即显示原有账号，且不重复启动第二个网关。未检测到旧实例时使用自带网关（7865）。",
+          "updated_at": "2026-11-07T12:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.08/wb2mgr-2.11.11-x86.fpk",
+              "sha256": "d2c606e00adbef145a88e0ebb750cccb290402d0f6397d0bc4242b24ec158de8",
+              "size": 61653020
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.08/wb2mgr-2.11.11-arm.fpk",
+              "sha256": "8bad632703103d1cb15bb52ed87b64229ce38f0ba71b6a747864927a07040108",
+              "size": 55172722
+            }
+          }
         }
       }
     }
