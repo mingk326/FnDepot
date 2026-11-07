@@ -556,6 +556,22 @@
               "size": 55231864
             }
           }
+        },
+        "2.11.10-1": {
+          "changelog": "版本号改为 2.11.10-1，便于应用中心识别为升级；内容与 2.11.10 相同：上游掉线自愈（30 秒巡检自动拉起）、内置 upstream-scripts、自带上游监听 127.0.0.1:7865。",
+          "updated_at": "2026-11-07T17:45:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.13/wb2mgr-2.11.10-1-x86.fpk",
+              "sha256": "ccff0e8ad66642c8975ac6935308cddc34453e663096d97c4eabe9f54f1cc48a",
+              "size": 61705535
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.13/wb2mgr-2.11.10-1-arm.fpk",
+              "sha256": "c5f8a1251d143dabf6080dbde1fc622bec8680d176f04b2a26b5adbc4b6d6103",
+              "size": 55231847
+            }
+          }
         }
       }
     }
