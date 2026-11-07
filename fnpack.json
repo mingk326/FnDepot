@@ -588,6 +588,22 @@
               "size": 55229648
             }
           }
+        },
+        "2.11.13": {
+          "changelog": "启动脚本被 root 调用时自动降权到数据目录属主，避免账号文件变成 root 属主导致账号丢失；VERSION 与包版本对齐。功能同 2.11.12：保存配置后自动重启自带网关并探测就绪。",
+          "updated_at": "2026-11-07T17:41:48Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.16/wb2mgr-2.11.13-x86.fpk",
+              "sha256": "8dedae5e5dacfc497a34293e1e5d1fa8accf8219fc7a5c183b394191a1b7e6fe",
+              "size": 61703141
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.16/wb2mgr-2.11.13-arm.fpk",
+              "sha256": "1be007bc942d6b0e6a3f88808062d1799ff368007213f8c9f353701652be6b94",
+              "size": 55228161
+            }
+          }
         }
       }
     }
