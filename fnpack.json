@@ -516,6 +516,48 @@
           }
         }
       }
+    },
+    "wbmgr": {
+      "display_name": "WorkBuddy Manager",
+      "desc": "腾讯 CodeBuddy 账号池管理控制台，内置 OpenAI 兼容反代网关：扫码纳管、定时签到保活、多密钥分发、IP 与模型白名单、调用日志与用量统计。本包为飞牛原生 fpk，内置 Python 运行时与上游网关，无需 Docker。",
+      "platform": [
+        "x86",
+        "arm"
+      ],
+      "categories": [
+        "AI赋能",
+        "系统工具"
+      ],
+      "icon_url": "wbmgr/ICON.PNG",
+      "preview_urls": [],
+      "readme_url": "wbmgr/README.md",
+      "bug_report_url": "https://github.com/mingk326/FnDepot/issues",
+      "maintainer": "ithtelab",
+      "maintainer_url": "https://github.com/ithtelab/workbuddy-manager",
+      "distributor": "mingk326",
+      "distributor_url": "https://github.com/mingk326/FnDepot",
+      "run_as": "package",
+      "install_type": "",
+      "is_docker": false,
+      "service_port": "7864",
+      "releases": {
+        "2.11.10": {
+          "changelog": "首个飞牛原生包：内置 Python 3.12 运行时与全部依赖，无需 Docker / 系统 Python；同包内置 workbuddy2api 上游网关（监听 127.0.0.1:7863）。支持扫码纳管、定时签到保活、多密钥分发与 IP/模型白名单、调用日志与用量统计；升级保留账号、密钥、配置与数据库。",
+          "updated_at": "2026-11-07T09:00:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.07/wb2mgr-2.11.10-x86.fpk",
+              "sha256": "3556d16ec6c534d8c5bd1b08283e16b7f1a352ef29d842f6989c5b3b2dd01f2c",
+              "size": 61652392
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.07/wb2mgr-2.11.10-arm.fpk",
+              "sha256": "d0f95f1252bf5c6ef5668829c47a2ceb04a23a295e06bf3fa7ee0d56c655493f",
+              "size": 55169492
+            }
+          }
+        }
+      }
     }
   }
 }
