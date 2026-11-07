@@ -542,18 +542,18 @@
       "service_port": "7864",
       "releases": {
         "2.11.10": {
-          "changelog": "内置上游 scripts（task_runner / task_common / school_open_day_2026 等 9 个文件），启动时自动同步到数据目录，修复「每日领奖」未找到上游任务脚本的问题；自带上游监听 127.0.0.1:7865，不再与 wb2api 的 7863 冲突。面板端口不变。",
-          "updated_at": "2026-11-07T16:00:00Z",
+          "changelog": "新增上游守护：每 30 秒巡检自带网关，掉线自动拉起；移除废弃的接管分支。其余与 2.11.10 一致（127.0.0.1:7865、内置 upstream-scripts）。",
+          "updated_at": "2026-11-07T17:20:00Z",
           "packages": {
             "x86": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.11/wb2mgr-2.11.10-x86.fpk",
-              "sha256": "5a333975c1d6eef5580514132a8e4b5922fbf30e31f687e0d4ea7c1c55d449c1",
-              "size": 61710538
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.12/wb2mgr-2.11.10-x86.fpk",
+              "sha256": "0b1f9a533a3d0a6c473f1c0aa3b96f150b4c4f6e77ba3a13b3048fca8d753276",
+              "size": 61705627
             },
             "arm": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.11/wb2mgr-2.11.10-arm.fpk",
-              "sha256": "e664b2fe6ce0264f528e6ec9d8292fc2624abe1b1f092bd1dcb620e7d2484ac2",
-              "size": 55225365
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.12/wb2mgr-2.11.10-arm.fpk",
+              "sha256": "2e0d859aed841d0880f75056ba797520abc0ff5468fb1a88644c37bef470fe90",
+              "size": 55231864
             }
           }
         }
