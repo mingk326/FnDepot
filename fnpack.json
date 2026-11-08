@@ -604,6 +604,22 @@
               "size": 55228161
             }
           }
+        },
+        "2.11.14": {
+          "changelog": "修复原生模式保存成功后仍提示「需要你手动一步」的误报：成功只显示已保存，失败才给出可操作提示。功能同 2.11.13。",
+          "updated_at": "2026-11-08T10:20:57Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.17/wb2mgr-2.11.14-x86.fpk",
+              "sha256": "0af0ec55286bb42b6c06f909d3ce5aa24bc9419f087772a583418289245f8f4c",
+              "size": 61700068
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.17/wb2mgr-2.11.14-arm.fpk",
+              "sha256": "3a4e189d5f305c5b09399b4fdf58fabbf145bda026cf0826c3497e877141250e",
+              "size": 55230632
+            }
+          }
         }
       }
     }
