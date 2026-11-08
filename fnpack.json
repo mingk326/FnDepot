@@ -604,22 +604,6 @@
               "size": 55228161
             }
           }
-        },
-        "2.11.14": {
-          "changelog": "修复手机端：复制密钥改为视口内选区回退并先聚焦，HTTP 访问也能复制；模型筛选弹层支持触摸滚动、限制在视口内，触屏不自动弹出键盘。其余同 2.11.13。",
-          "updated_at": "2026-11-08T09:28:05Z",
-          "packages": {
-            "x86": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.17/wb2mgr-2.11.14-x86.fpk",
-              "sha256": "9a75ff7e1361290aea73428a9160ac49c8cd740e539cc161fd4b69ffc997f17b",
-              "size": 61698015
-            },
-            "arm": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.17/wb2mgr-2.11.14-arm.fpk",
-              "sha256": "1b9988d804131c745b58d8b11995c091a0efddc1c6c4d63f09ff9765085043e5",
-              "size": 55220521
-            }
-          }
         }
       }
     }
