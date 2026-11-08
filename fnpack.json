@@ -514,6 +514,22 @@
               "size": 4642428
             }
           }
+        },
+        "1.23.0": {
+          "changelog": "移植上游 2026-11-08 P0/P1：输出预算下限、续写累计上限与预算继承、断流补截断终态、$wbEncrypted 账号文件、入站 64MiB 护栏 + 11140 连坐、11134 过载不罚号、cockpit 导入兼容、messages 拆分 <think:SUF>。",
+          "updated_at": "2026-11-08T23:41:17Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.09a/wb2api-1.23.0-x86.fpk",
+              "sha256": "88e47d403f46cf2cb952cd225af4d122730fe4bfb7b1e1be09f522b6a3bec6c2",
+              "size": 5149203
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.09a/wb2api-1.23.0-arm.fpk",
+              "sha256": "7cfbc5c6b8b606371a6be7a8927ce829f7d691ef9308770981efc4634af540d8",
+              "size": 4666957
+            }
+          }
         }
       }
     },
