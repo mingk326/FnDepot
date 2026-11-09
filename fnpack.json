@@ -636,6 +636,22 @@
               "size": 55230632
             }
           }
+        },
+        "2.11.15": {
+          "changelog": "全量同步上游 v2.11.11（账号每日用量、账号×模型趋势、多分组签到、调度冲突提示与统一、429 恢复时间、HTTP/2、净化热重载），保留 7865 隔离、保存自动重启并就绪探测、失败才提示、root 降权、掉线自愈与内置任务脚本。",
+          "updated_at": "2026-11-09T12:38:52Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.18/wb2mgr-2.11.15-x86.fpk",
+              "sha256": "8a211fc413478d56832e4d1a7ee89726a0b2222cd6292abe8e16fadb819c2192",
+              "size": 61751225
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.18/wb2mgr-2.11.15-arm.fpk",
+              "sha256": "35c8b4620dee4a973f7e9b2bb4c43ed70906e01a4df67a84719bd17ec6a9a22d",
+              "size": 55258020
+            }
+          }
         }
       }
     }
