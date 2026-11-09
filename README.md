@@ -36,10 +36,10 @@ https://cdn.jsdelivr.net/gh/mingk326/FnDepot@main/fnpack.json
 
 ## 其他应用
 
-- [WorkBuddy Manager 2.11.10 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.07/wb2mgr-2.11.10-x86.fpk)
-- [WorkBuddy Manager 2.11.10 arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.07/wb2mgr-2.11.10-arm.fpk)
+- [WorkBuddy Manager 2.11.15 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.18/wb2mgr-2.11.15-x86.fpk)
+- [WorkBuddy Manager 2.11.15 arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.18/wb2mgr-2.11.15-arm.fpk)
 
-WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容反代网关），本包为飞牛原生 fpk，内置 Python 运行时与上游网关，不需要 Docker。默认面板端口 `7864`，上游仅监听 `127.0.0.1:7863`。
+WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容反代网关），本包为飞牛原生 fpk，内置 Python 运行时与上游网关，不需要 Docker。默认面板端口 `7864`，上游仅监听 `127.0.0.1:7865`。
 
 
 安装后面板地址：`http://<NAS-IP>:7863/panel`，模型地址：`http://<NAS-IP>:7863/v1`。面板需**管理员密钥**（安装向导设置的密钥自动为管理员），普通密钥只能调用模型接口。
