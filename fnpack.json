@@ -652,6 +652,22 @@
               "size": 55258020
             }
           }
+        },
+        "2.11.16": {
+          "changelog": "同步上游 v2.11.13：客户端余额查询、调度重载卡死修复、积分包消费/到账时间修复、429 排队不误伤账号、登录表单安全；保留 7865 隔离、保存自动重启并就绪探测、root 降权、掉线自愈与内置任务脚本。",
+          "updated_at": "2026-11-10T16:53:13Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.19/wb2mgr-2.11.16-x86.fpk",
+              "sha256": "bd8142149cd6f2ddd35eb1cce5702bbbffe8e45b7a34dbf17252e5080225d0ea",
+              "size": 61755303
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.19/wb2mgr-2.11.16-arm.fpk",
+              "sha256": "0391f4b0116562f7b09d9827c33d814a4b650a626044852087ebc47cb4b940d5",
+              "size": 55261817
+            }
+          }
         }
       }
     }
