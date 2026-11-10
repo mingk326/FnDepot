@@ -36,8 +36,8 @@ https://cdn.jsdelivr.net/gh/mingk326/FnDepot@main/fnpack.json
 
 ## 其他应用
 
-- [WorkBuddy Manager 2.11.15 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.18/wb2mgr-2.11.15-x86.fpk)
-- [WorkBuddy Manager 2.11.15 arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.18/wb2mgr-2.11.15-arm.fpk)
+- [WorkBuddy Manager 2.11.15 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.19/wb2mgr-2.11.16-x86.fpk)
+- [WorkBuddy Manager 2.11.15 arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.19/wb2mgr-2.11.16-arm.fpk)
 
 WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容反代网关），本包为飞牛原生 fpk，内置 Python 运行时与上游网关，不需要 Docker。默认面板端口 `7864`，上游仅监听 `127.0.0.1:7865`。
 
