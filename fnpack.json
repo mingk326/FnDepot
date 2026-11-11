@@ -668,6 +668,22 @@
               "size": 55261817
             }
           }
+        },
+        "2.11.17": {
+          "changelog": "同步上游 v2.11.14：新增轨迹调用抓包（默认关闭）、/v1/credits 与余额分档、重登只修目标账号、6004 冷却保留到真实重置；保留 7865 隔离、保存自动重启并就绪探测、root 降权、掉线自愈与内置任务脚本。",
+          "updated_at": "2026-11-11T14:59:31Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.20/wb2mgr-2.11.17-x86.fpk",
+              "sha256": "99f53df5eef499f9dd84718b6f12ea2c9112aee0080057ee2b4dde46d92f10e1",
+              "size": 61892158
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.20/wb2mgr-2.11.17-arm.fpk",
+              "sha256": "88e4d6c7807a8b1e4ca1eb43e3a9c4f9ad953312da5a3db889dfc56310d85930",
+              "size": 55393202
+            }
+          }
         }
       }
     }
