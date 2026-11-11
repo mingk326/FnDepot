@@ -10,8 +10,10 @@
 
 ## 当前版本
 
-`1.22.1`
+`1.24.0`
 
+- **上游 P0/P1 移植（1.24.0，2026-11-11）**：账号目录热重载（10s 轮询、连续 2 次确认才删、解析失败只增不删）与手动 `POST /panel/api/accounts/reload`；上游粘帧自动拆成独立 SSE 帧，修客户端 JSON 解析失败；请求级错误（内容拦截 / 超长 / 图片 / 参数 / 11151 空段）不再解绑会话粘性；`klauspost/compress` 升 v1.20.2（GO-2026-6865）；思考完直接收尾的空回复救援一次不再 502；「说一句就停」两条救援（预告句接正文 / 工具轮只采纳工具调用）与误救闸门；出站补位空 text 段并镜像 reasoning；等首帧期间补 SSE 注释帧（`server.head_keepalive`，默认 1.5s）；签到遇瞬时失败在 10 / 40 分钟后自动补签；`/v1/models` 透出 `promo_factor` / `promo_credits` / `promo_label`；`Buddy_App` 事件 `isFirstPage` 改布尔。打包侧修复应用中心 APP_CRASH 误判：启动前接管已有进程并补写 `app.pid`，启动输出写入 `info.log`。
+- **上游 P0/P1 移植（1.23.0，2026-11-08）**：输出预算下限、续写累计上限与预算继承、断流补截断终态、`$wbEncrypted` 账号文件、入站 64MiB 护栏 + 11140 连坐、11134 过载不罚号、cockpit 导入兼容、`/v1/messages` 拆分 `<think:SUF>`。
 - **1.22.1 回归修正（2026-11-07）**：客户端断开判定只看客户端自己的请求 ctx —— 上游空闲看门狗掐断不再被误判为「人走了」，恢复截断终态与一次盲重试。补 `tools[].function.description` 出站脱敏；`/v1/search` 对 DSH 把空 url 卡片改写为等价检索链接并同步 `total_results`；面板首页轮询载荷未变时不再重建账号表 / 锁池表；单号签到响应回显账号真实 `realm`。
 - **流式链路与面板加固（1.22.0，2026-11-04）**：上游心跳注释帧补帧分隔，修 GLM 工具调用首帧被吞（`completed.output=null`）；流式 `Close` 前限时读掉流尾并幂等，上游连接可复用；客户端断开归因与续写门禁，不再误报「上游断流」、不再白发续写；请求日志单行超 16MB 只丢该行，不再整页 500。思考档位降级跳过 `off`（不再静默关闭思考）；新增 `/v1/messages/count_tokens` 本地估算；模型别名支持 `*` / `?` 通配；面板鉴权改为默认拒绝（未注册路径 401）；cockpit 导入保留 `enterprise_id` / `enterpriseId`，企业号导入跳过签到。
 - **上游协议指纹整批（1.21.0，2026-11-02）**：出站 TLS ClientHello 复刻官方 Node/OpenSSL（JA3+JA4 双对齐，`upstream.tls_fingerprint=go` 可回退）；请求头发送顺序、头名大小写、官方 `Connection` 头全部对齐真机；`Accept-Encoding` 四段 + br/gzip/deflate 解码，chat 大 body 改 gzip。删除上游已下架的 4 个任务与夜猫子排程；官方补偿停止每日盲领；body 补轮级 `conversationRequestId`；global `/v2/chat/busy` 404 记忆 + 轻头族；`/v1/models` 追加 models.dev 能力声明；运行日志增量改单调 `seq`；国际版签到改为先查状态；新增 `cn.billing_base` 分域配置；新增 `/v1/embeddings`（默认关闭，`features.embeddings_enabled` 热生效）
