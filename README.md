@@ -29,10 +29,10 @@ https://cdn.jsdelivr.net/gh/mingk326/FnDepot@main/fnpack.json
 
 ## 直接下载
 
-- [wb2api 1.23.0 x86](https://github.com/mingk326/FnDepot/releases/download/2026.11.09a/wb2api-1.23.0-x86.fpk)
-- [wb2api 1.23.0 arm](https://github.com/mingk326/FnDepot/releases/download/2026.11.09a/wb2api-1.23.0-arm.fpk)
+- [wb2api 1.24.0 x86](https://github.com/mingk326/FnDepot/releases/download/2026.11.11a/wb2api-1.24.0-x86.fpk)
+- [wb2api 1.24.0 arm](https://github.com/mingk326/FnDepot/releases/download/2026.11.11a/wb2api-1.24.0-arm.fpk)
 
-历史版本见 [Releases](https://github.com/mingk326/FnDepot/releases)：1.13.3–1.23.0（每版 x86 / arm）。
+历史版本见 [Releases](https://github.com/mingk326/FnDepot/releases)：1.13.3–1.24.0（每版 x86 / arm）。
 
 ## 其他应用
 
