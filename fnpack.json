@@ -530,6 +530,22 @@
               "size": 4666957
             }
           }
+        },
+        "1.24.0": {
+          "changelog": "移植上游 2026-11-11 P0/P1：账号目录热重载（10s 轮询、连续 2 次确认才删、解析失败只增不删）与手动 POST /panel/api/accounts/reload；上游粘帧自动拆成独立 SSE 帧；请求级错误不再解绑会话粘性；klauspost/compress 升 v1.20.2（GO-2026-6865）；思考完直接收尾的空回复救援一次不再 502；「说一句就停」两条救援与误救闸门；出站空 text 段补位并镜像 reasoning（11151 归类 empty_content）；等首帧时补 SSE 注释帧（server.head_keepalive 默认 1.5s）；签到瞬时失败 10/40 分钟自动补签；/v1/models 透出 promo_factor/promo_credits/promo_label；修复应用中心 APP_CRASH 误判（启动接管已有进程并补写 app.pid）。",
+          "updated_at": "2026-11-11T16:09:36Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.11a/wb2api-1.24.0-x86.fpk",
+              "sha256": "822c0031b1358b5f70c1414f9319bdcd1fb5fd68ad29e01b31737190fbb2c721",
+              "size": 5184527
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.11a/wb2api-1.24.0-arm.fpk",
+              "sha256": "148c4d9d399f9e4a4d455fa63daaec7c75b367e47f2b81f3be914ba825fdedb7",
+              "size": 4697642
+            }
+          }
         }
       }
     },
