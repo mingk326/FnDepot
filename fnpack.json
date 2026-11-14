@@ -700,6 +700,22 @@
               "size": 55393202
             }
           }
+        },
+        "2.11.18": {
+          "changelog": "同步上游 v2.11.15：新增 /v1/tools/search web 搜索透传（配套网关 0057 补丁，账号池轮转 + 15001 配额冷却）、密钥每日 Token 限额、账号列表拖拽自定义排序、趋势图积分曲线、单账号刷新积分、到期角标按自然日合并；修复静态资源 gzip（SSE 与 /v1 不压缩）、密钥弹窗内浮层滚轮失效、Docker 数据卷属主导致启动失败。保留飞牛原生定制：7865 隔离、保存配置自动重启并就绪探测、root 降权、掉线自愈与内置任务脚本。",
+          "updated_at": "2026-11-14T23:09:46Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.21/wb2mgr-2.11.18-x86.fpk",
+              "sha256": "b93684e0c092d3ff383ac78696f4a734a2d1b3ba813216613fee0c3a073f181c",
+              "size": 61890160
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.21/wb2mgr-2.11.18-arm.fpk",
+              "sha256": "f24ac198062dd4850f44b0f3375885cee2d0ea0acf49e69dfeb6212700352ae4",
+              "size": 55403195
+            }
+          }
         }
       }
     }
