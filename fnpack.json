@@ -546,6 +546,22 @@
               "size": 4697642
             }
           }
+        },
+        "1.25.0": {
+          "changelog": "移植上游 2026-11-14 回归修复：粘帧拆帧覆盖非流式聚合与首帧否决、error 帧计入终态；空 text 补位改字节级并挪到净化之后（不再改写工具结果精度/转义）；热重载新增防整池清空护栏（目录读空不删、单轮超 1/5 需 force=1）且不覆盖刚刷新的令牌；加密 auth 回写保持加密并保留桌面端字段；11140 判据收紧、按域连坐、阈值随池缩放与退避、首帧同样停手；补签按号错开去重；授权链接补 version/loginSessionId，设备授权 platform 改真机值。",
+          "updated_at": "2026-11-15T00:16:27Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.15a/wb2api-1.25.0-x86.fpk",
+              "sha256": "9cb85da2bf609da37eb97fd6f2f7bc898aadd6faf3790724b084f2465eadd1b2",
+              "size": 5196841
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.15a/wb2api-1.25.0-arm.fpk",
+              "sha256": "82c52ebff2d3df7d89a536fca468ee36b5a5b67942d61515ae8b69d32041bbf9",
+              "size": 4712470
+            }
+          }
         }
       }
     },
