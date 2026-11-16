@@ -732,6 +732,22 @@
               "size": 55403195
             }
           }
+        },
+        "2.11.19": {
+          "changelog": "同步上游 v2.11.16 / v2.11.17：网关跨域可在面板配置（仅作用于 /v1、/v2 数据面，保存即生效、可填 *；管理面 /api 仍由 WB_CORS_ORIGINS 决定）；/v1/tools/search 增加入站参数校验（type、max_results 1–20、allowed_domains、blocked_domains、freshness=d1|m1|y1），写错在面板层直接 400，不再白耗账号池搜索配额。保留飞牛原生定制：7865 隔离、保存配置自动重启并探测就绪、root 降权、掉线自愈与内置任务脚本。",
+          "updated_at": "2026-11-16T10:50:39Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.22/wb2mgr-2.11.19-x86.fpk",
+              "sha256": "8a35581a7713661cc67012d07026b2618a5eb30453274e1e77638bacb1cf2dd4",
+              "size": 61915394
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.22/wb2mgr-2.11.19-arm.fpk",
+              "sha256": "3b4e126dde68ba9552bc4ee412f5d056c799cc8e7e8791731ba7870fa8a9b15e",
+              "size": 55430558
+            }
+          }
         }
       }
     }
