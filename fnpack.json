@@ -562,6 +562,22 @@
               "size": 4712470
             }
           }
+        },
+        "1.25.1": {
+          "changelog": "移植上游 2026-11-16 之后的提交：credits 对外改报当前可用量（禁用号=0）并新增 credits_raw 真实余额快照与 /status 顶层积分汇总；桌面前端指纹升级 CN 5.11.3 / 内置 CLI 2.176.0（GL 5.9.4 / 2.165.0，按域取默认）；toolonly 收尾新增意图判定；narration 救援上限 2 次、超 400 字节后仅悬空标点或未闭合代码块才续写；新增模型规则（批量模型黑/白名单，deny 优先、allow 取并集，随 state.json 落盘并进 Redis 快照，面板新增「模型规则」页），本域全被规则挡住时 /v1/chat/completions 回 400 model_not_allowed 并带 model_rules: N/N 提示；小程序任务回落 mp 列表；/v1/search 多卡片占位链接加 #card-N 防客户端去重丢条。",
+          "updated_at": "2026-11-16T17:16:11Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.17a/wb2api-1.25.1-x86.fpk",
+              "sha256": "dc3489d8330bb33106ec1390a6d46209b4980bb5320ffdf27f591ce4b9adad61",
+              "size": 5224605
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/2026.11.17a/wb2api-1.25.1-arm.fpk",
+              "sha256": "1cec3aa90768ab1c91edb13ebb5e3681bfbc2314edb10cb08818d39b2ab5907d",
+              "size": 4735002
+            }
+          }
         }
       }
     },
