@@ -821,6 +821,22 @@
               "size": 14062127
             }
           }
+        },
+        "0.6.1": {
+          "changelog": "补上桌面入口（ui/config 与 ui/images/icon_64.png、icon_256.png），安装后飞牛桌面直接出现 ARTEX 图标；移除无用的 ui/index.html。其余与 0.6.0 一致。",
+          "updated_at": "2026-11-18T22:22:58Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-x86.fpk",
+              "sha256": "285b145a2aa9673f575446d5c81add5038f87835021fbfbfb68ed0a44e7634c3",
+              "size": 15917844
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-arm.fpk",
+              "sha256": "c53cc72fb9827412b0706782d5576bb03bf6f799272879b57a743b55ecf5c0e8",
+              "size": 14950908
+            }
+          }
         }
       }
     },
