@@ -880,6 +880,47 @@
           }
         }
       }
+    },
+    "artexcn": {
+      "display_name": "ARTEX 中文版",
+      "desc": "中文界面的 ARTEX：AI 自主渗透测试平台，默认简体中文（可切英文），内置定时任务、代理池、请求重放、发现案件、MCP 与任务文件管理。本包为飞牛原生 fpk，内置 PostgreSQL 16.14，无需 Docker。首次打开直接设置管理员密码，无初始化令牌。仅限已授权目标使用。",
+      "platform": [
+        "x86",
+        "arm"
+      ],
+      "categories": [
+        "系统工具"
+      ],
+      "icon_url": "artexcn/ICON.PNG",
+      "preview_urls": [],
+      "readme_url": "artexcn/README.md",
+      "bug_report_url": "https://github.com/mingk326/FnDepot/issues",
+      "maintainer": "RuoJi6",
+      "maintainer_url": "https://github.com/RuoJi6/ARTEX",
+      "distributor": "mingk326",
+      "distributor_url": "https://github.com/mingk326/FnDepot",
+      "run_as": "package",
+      "install_type": "",
+      "is_docker": false,
+      "service_port": "8789",
+      "releases": {
+        "0.3.30": {
+          "changelog": "首个中文版：基于 RuoJi6/ARTEX v0.3.30，界面默认简体中文（可切英文）；首次打开直接设置管理员密码，无需日志中的初始化令牌；内置定时任务、代理池、请求重放、发现案件、MCP、任务文件；合并英文版 7 个额外技能，共 10 个；独立数据库 artexcn、独立代理端口 8790，默认 Web 端口 8789，可与英文版并存。",
+          "updated_at": "2026-11-18T23:15:25Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-x86.fpk",
+              "sha256": "4ba059a7f88970c2a5a0941dc7e0ca8fbabdef89a0f6608fe456df8774b14f11",
+              "size": 17170973
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-arm.fpk",
+              "sha256": "2edcc3ce678a05b3fdad64311d49b46efb03296cc5c43fc814b57e4472548691",
+              "size": 16148653
+            }
+          }
+        }
+      }
     }
   }
 }
