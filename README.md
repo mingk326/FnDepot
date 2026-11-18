@@ -7,6 +7,8 @@
 | 包名 | 显示名 | 说明 | 平台 |
 |---|---|---|---|
 | `wb2api` | wb2api | WorkBuddy2API：把腾讯 CodeBuddy 账号包装成 OpenAI 兼容 API 的网关，自带 Web 管理面板 | x86 / arm |
+| `artex` | ARTEX | AI 驱动的自动化安全测试平台，内置 PostgreSQL 16.14 与 10 个技能，原生 fpk | x86 / arm |
+| `artexpg` | ARTEX PostgreSQL | artex 的数据库依赖包：PostgreSQL 16.14，仅监听 127.0.0.1:55432 | x86 / arm |
 
 ## 添加应用源
 
@@ -44,12 +46,27 @@ WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容�
 
 安装后面板地址：`http://<NAS-IP>:7863/panel`，模型地址：`http://<NAS-IP>:7863/v1`。面板需**管理员密钥**（安装向导设置的密钥自动为管理员），普通密钥只能调用模型接口。
 
+### ARTEX 0.6.0
+
+- [ARTEX 0.6.0 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.0-x86.fpk)
+- [ARTEX 0.6.0 arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.0-arm.fpk)
+- [ARTEX PostgreSQL 16.14 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artexpg-16.14-x86.fpk)
+- [ARTEX PostgreSQL 16.14 arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artexpg-16.14-arm.fpk)
+
+ARTEX 是 AI 驱动的自动化安全测试平台（上游 [BaaRai/ARTEX](https://github.com/BaaRai/ARTEX)，AGPL-3.0），**仅限已获得明确授权的目标使用**。本包为飞牛原生 fpk，内置 PostgreSQL 16.14（依赖包 `artexpg`，仅监听 `127.0.0.1:55432`），默认端口 `8787`，安装后访问 `http://<NAS-IP>:8787/`。应用中心会自动拉取依赖，也可先手动安装 `artexpg`。
+
 ## 目录结构
 
 ```
 .
 ├── fnpack.json              # 应用源清单（schema_version 2）
 ├── README.md
+├── artex/
+│   ├── ICON.PNG             # 应用图标
+│   └── README.md            # 应用详情页说明
+├── artexpg/
+│   ├── ICON.PNG
+│   └── README.md
 └── wb2api/
     ├── ICON.PNG             # 应用图标
     ├── README.md            # 应用详情页说明
