@@ -764,6 +764,22 @@
               "size": 55430558
             }
           }
+        },
+        "2.11.20": {
+          "changelog": "同步上游 v2.11.18 / v2.11.19：密钥支持自定义形态（需 WB_KEY_CUSTOM_ENABLED=1，默认关闭）；统计页顶部新增实时指标条（客户端在途 / 峰值 / 上限 / RPM / 近 3 分钟走势，1 秒刷新）并修正实时并发口径；修复 /v1/usage 积分段小数被截成 0、「只看限时免费」漏掉 -free 模型、开机自启不启动项目、/v1/responses 未透传 parallel_tool_calls（Codex 报 11148）；PostgreSQL 异地备份按字节预算装批并增加失败退避与连接超时；账号保护预警移到「设置 → 上游」；密钥弹窗内模型清单浮层不再被裁切。上游网关源码未变（upstream-id 一致），二进制沿用 2.11.19；Dockerfile 的 Alpine 瘦身与容器 TZ 只作用于容器部署，飞牛包时区跟随宿主，不受影响。保留飞牛原生定制：7865 隔离、保存配置自动重启并探测就绪、root 降权、掉线自愈与内置任务脚本。",
+          "updated_at": "2026-11-18T19:06:24Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.23/wb2mgr-2.11.20-x86.fpk",
+              "sha256": "bbe1ce3413bd9863ddc40a720d3d717a1f1a80d45a316b06f886aa30c150277f",
+              "size": 61959246
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.23/wb2mgr-2.11.20-arm.fpk",
+              "sha256": "d2682ba7afe1b964671fc8e10f10b021e45cd9317b02acafa4320176c254c0c7",
+              "size": 55476952
+            }
+          }
         }
       }
     }
