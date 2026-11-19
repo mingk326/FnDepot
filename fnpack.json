@@ -9,7 +9,7 @@
   "apps": {
     "wb2api": {
       "display_name": "wb2api",
-      "desc": "🤖WorkBuddy2API是一个自托管的OpenAI兼容反向代理网关，将腾讯 CodeBuddy账号包装为统一的/v1/chat/completions服务，不保证未来可用性与账户安全，介意勿用。",
+      "desc": "🤖WorkBuddy2API是一个自托管的OpenAI兼容反向代理网关，将腾讯 CodeBuddy账号包装为统一的/v1/chat/completions服务，不保证未来可用性与账户安全，介意勿用。 账号与配置存放在应用共享目录：文件管理 → 应用文件 → wb2api（auths/、state.json、config.json）。",
       "platform": [
         "x86",
         "arm"
@@ -578,12 +578,28 @@
               "size": 4735002
             }
           }
+        },
+        "1.25.2": {
+          "changelog": "数据目录迁移到应用共享目录：账号 auths/、state.json 与 config.json 改存 /vol4/@appshare/wb2api（文件管理 → 应用文件可见、可直接管理），首次升级自动从私有目录迁移；新增 config/resource 共享声明。网关与面板行为不变。",
+          "updated_at": "2026-11-19T16:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wb2api-2026.11.19/wb2api-1.25.2-x86.fpk",
+              "sha256": "7a3fd10d9b526001f4f4ffd593b1306e703ebf7411c5fc3f0747de08a3d02ef1",
+              "size": 5224789
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wb2api-2026.11.19/wb2api-1.25.2-arm.fpk",
+              "sha256": "688c8d5393859e8445ca208a364c3958b3a7e9cf80653f064c7979023bba87ef",
+              "size": 4735284
+            }
+          }
         }
       }
     },
     "wbmgr": {
       "display_name": "WorkBuddy Manager",
-      "desc": "腾讯 CodeBuddy 账号池管理控制台，内置 OpenAI 兼容反代网关：扫码纳管、定时签到保活、多密钥分发、IP 与模型白名单、调用日志与用量统计。本包为飞牛原生 fpk，内置 Python 运行时与上游网关，无需 Docker。",
+      "desc": "腾讯 CodeBuddy 账号池管理控制台，内置 OpenAI 兼容反代网关：扫码纳管、定时签到保活、多密钥分发、IP 与模型白名单、调用日志与用量统计。本包为飞牛原生 fpk，内置 Python 运行时与上游网关，无需 Docker。 账号与用量数据存放在应用共享目录：文件管理 → 应用文件 → wbmgr（data/manager.db、upstream/）。",
       "platform": [
         "x86",
         "arm"
@@ -796,6 +812,22 @@
               "size": 55483850
             }
           }
+        },
+        "2.11.22": {
+          "changelog": "数据目录迁移到应用共享目录：账号、密钥、用量数据库与上游配置改存 /vol4/@appshare/wbmgr（文件管理 → 应用文件可见、可直接管理），首次升级自动从私有目录迁移；新增 config/resource 共享声明。面板与网关行为保持不变（上游 v2.11.20）。",
+          "updated_at": "2026-11-19T16:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.25/wb2mgr-2.11.22-x86.fpk",
+              "sha256": "e80cbead72fc2d6094cec397ca2e910a9ad037ad637ffb38fc90a1a856f6be02",
+              "size": 61960110
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.25/wb2mgr-2.11.22-arm.fpk",
+              "sha256": "c04c3aff92a0bf3902a914fffa2b83fc9c3150343e3cbc08b5b4b8ad72f4dc4d",
+              "size": 55482600
+            }
+          }
         }
       }
     },
@@ -890,7 +922,7 @@
     },
     "artexpg": {
       "display_name": "ARTEX PostgreSQL",
-      "desc": "PostgreSQL 16.14 数据库运行时，为 ARTEX BaaRai 版 / RuoJi6 版提供数据存储。仅监听 127.0.0.1:55432，不对外暴露。安装 ARTEX 时由应用中心自动先装本包，通常无需单独操作。",
+      "desc": "PostgreSQL 16.14 数据库运行时，为 ARTEX BaaRai 版 / RuoJi6 版提供数据存储。仅监听 127.0.0.1:55432，不对外暴露。安装 ARTEX 时由应用中心自动先装本包，通常无需单独操作。 集群数据存放在应用共享目录：文件管理 → 应用文件 → artexpg（pgdata/），请勿手动修改或删除。",
       "platform": [
         "x86",
         "arm"
@@ -924,6 +956,22 @@
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artexpg-16.14-arm.fpk",
               "sha256": "62c2f0acea61cfcfb1f9b4c429cd25946da26544392fd0c1d056701dd58afdd7",
               "size": 32597990
+            }
+          }
+        },
+        "16.14.1": {
+          "changelog": "数据目录迁移到应用共享目录：PostgreSQL 集群数据改存 /vol4/@appshare/artexpg/pgdata（文件管理 → 应用文件可见），首次启动自动从私有目录迁移；新增 config/resource 共享声明。注意：请勿在文件管理中修改或删除 pgdata，会损坏数据库。PostgreSQL 版本仍为 16.14。",
+          "updated_at": "2026-11-19T16:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexpg-2026.11.19/artexpg-16.14.1-x86.fpk",
+              "sha256": "3b999d893f44903df5d2ce526ccd5fe4bfae254ab4e9a8bdca2c0bb4e81eb991",
+              "size": 33171391
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexpg-2026.11.19/artexpg-16.14.1-arm.fpk",
+              "sha256": "53f69ccd149264b0a823403e10d75b49574d03c8860bd7969a0cf776f2ead097",
+              "size": 32598791
             }
           }
         }
