@@ -824,17 +824,17 @@
         },
         "0.6.1": {
           "changelog": "补上桌面入口（ui/config 与 ui/images/icon_64.png、icon_256.png），安装后飞牛桌面直接出现 ARTEX 图标；移除无用的 ui/index.html。其余与 0.6.0 一致。",
-          "updated_at": "2026-11-18T22:22:58Z",
+          "updated_at": "2026-11-19T00:38:14Z",
           "packages": {
             "x86": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-x86.fpk",
-              "sha256": "285b145a2aa9673f575446d5c81add5038f87835021fbfbfb68ed0a44e7634c3",
-              "size": 15917844
+              "sha256": "a84d9ffb51c91bd976018fc273dbceb36f381a2bb1bf53ccf8a4c4223716c6f0",
+              "size": 15918014
             },
             "arm": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-arm.fpk",
-              "sha256": "c53cc72fb9827412b0706782d5576bb03bf6f799272879b57a743b55ecf5c0e8",
-              "size": 14950908
+              "sha256": "b8d69bfd4ea290f26362ea933f2c12ab27b67bd82294e22275b719dacac1846a",
+              "size": 14950786
             }
           }
         }
@@ -906,17 +906,17 @@
       "releases": {
         "0.3.30": {
           "changelog": "中文版首发：基于 RuoJi6/ARTEX v0.3.30，界面默认简体中文（可切英文）；首次打开直接设置管理员密码，无需日志中的初始化令牌；内置定时任务、代理池、请求重放、发现案件、MCP、任务文件；合并英文版 7 个额外技能，共 10 个；默认 Web 端口改为高位 28789，代理 28790，独立数据库 artexcn，可与英文版并存。",
-          "updated_at": "2026-11-19T00:11:40Z",
+          "updated_at": "2026-11-19T00:38:14Z",
           "packages": {
             "x86": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-x86.fpk",
-              "sha256": "af0857aff270a754c47ee904a33e9fece6455777bcf3b60f5390158d7dffcff4",
-              "size": 17171032
+              "sha256": "3dfaa92430f7c5d3b9f3992813c98399be8d72aa8dd962adc075c53cb336c9a6",
+              "size": 17171046
             },
             "arm": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-arm.fpk",
-              "sha256": "1ed2b9ab0b3d8c6f930f7b709359ec9b20700c899c1529e66d13f8a7dea5b6f4",
-              "size": 16148705
+              "sha256": "75def27c0d5fd9c08bca182285bc6a56e1b923b2046d810b3f47a13524b20489",
+              "size": 16148713
             }
           }
         }
