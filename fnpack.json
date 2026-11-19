@@ -883,7 +883,7 @@
     },
     "artexcn": {
       "display_name": "ARTEX RuoJi6 版",
-      "desc": "中文界面的 ARTEX：AI 自主渗透测试平台，默认简体中文（可切英文），内置定时任务、代理池、请求重放、发现案件、MCP 与任务文件管理。本包为飞牛原生 fpk，PostgreSQL 16.14 由依赖包 artexpg 提供（安装本应用时应用中心自动先装），无需 Docker、无需另装外部数据库。首次打开直接设置管理员密码，无初始化令牌。仅限已授权目标使用。 登录信息：用户名固定 ARTEX；没有内置默认密码，首次打开时自行设置（至少 8 位），测试/演示环境常用 admin123456；忘记密码可在应用目录执行 reset-password.sh -p '新密码' 重置，无需重启服务。",
+      "desc": "中文界面的 ARTEX：AI 自主渗透测试平台，默认简体中文（可切英文），内置定时任务、代理池、请求重放、发现案件、MCP 与任务文件管理。本包为飞牛原生 fpk，PostgreSQL 16.14 由依赖包 artexpg 提供（安装本应用时应用中心自动先装），无需 Docker、无需另装外部数据库。首次打开直接设置管理员密码，无初始化令牌。仅限已授权目标使用。 登录信息：用户名固定 ARTEX；没有内置默认密码，首次打开时自行设置（至少 8 位），测试/演示环境常用 admin123456；忘记密码可在应用目录执行 reset-password.sh -p '新密码' 重置，无需重启服务。 任务产物存放在应用共享目录：文件管理 → 应用文件 → artexcn（tasks/<任务ID>），可直接查看和删除。",
       "platform": [
         "x86",
         "arm"
@@ -965,6 +965,22 @@
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19c/artexcn-0.3.33-arm.fpk",
               "sha256": "10d83918fced3b8990f14b5ec2c122729f65430a0f2ea51ecc97853fbd370fc5",
               "size": 16279414
+            }
+          }
+        },
+        "0.3.34": {
+          "changelog": "1) 修复 agent 执行命令全部失败：应用中心拉起的进程没有 PATH，Bash / shell_open 报 `exec: \"bash\": executable file not found in $PATH`；包脚本与二进制均补齐标准 PATH。2) 任务产物改存到应用共享目录：声明 data-share 后文件写入 /vol4/@appshare/artexcn（文件管理 → 应用文件 可见、可直接删除），首次启动自动迁移历史数据，共享目录不可用时回落私有目录。3) 修复日志级别误判（成功连接测试因响应体含 \"error\": null 被标成 error）。",
+          "updated_at": "2026-11-19T12:50:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19d/artexcn-0.3.34-x86.fpk",
+              "sha256": "e226a044e5ec14855006e53e2139d3bf1f1e97081513a9d9c4dbc608cbcda84f",
+              "size": 17315101
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19d/artexcn-0.3.34-arm.fpk",
+              "sha256": "360e994eaeaba89d12547c6f25af1cd58d4980b73bb19f7948a4806bac22b4a1",
+              "size": 16280054
             }
           }
         }
