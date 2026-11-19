@@ -47,18 +47,18 @@ WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容�
 
 安装后面板地址：`http://<NAS-IP>:7863/panel`，模型地址：`http://<NAS-IP>:7863/v1`。面板需**管理员密钥**（安装向导设置的密钥自动为管理员），普通密钥只能调用模型接口。
 
-### ARTEX RuoJi6 版 0.3.32
+### ARTEX RuoJi6 版 0.3.33
 
-- [ARTEX RuoJi6 版 0.3.32 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-x86.fpk)
-- [ARTEX RuoJi6 版 0.3.32 arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-arm.fpk)
+- [ARTEX RuoJi6 版 0.3.33 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19c/artexcn-0.3.33-x86.fpk)
+- [ARTEX RuoJi6 版 0.3.33 arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19c/artexcn-0.3.33-arm.fpk)
 - 同样依赖 [ARTEX PostgreSQL 16.14](https://github.com/mingk326/FnDepot/releases/tag/artex-2026.11.19)
-- 旧版：[0.3.31 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-arm.fpk) · [0.3.30 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-arm.fpk)
+- 旧版：[0.3.32 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-arm.fpk) · [0.3.31 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-arm.fpk)
 
 默认**简体中文**界面，可在右上角切换英文；首次打开直接设置管理员密码（至少 8 位），**没有初始化令牌**，不用翻日志。默认 Web 端口 `28789`、代理 `127.0.0.1:28790`、独立数据库 `artexcn`，因此可以和上面的 ARTEX BaaRai 版并存。内置 10 个技能（中文版 3 个 + 英文版 7 个）。上游 [RuoJi6/ARTEX](https://github.com/RuoJi6/ARTEX)，AGPL-3.0，**仅限已授权目标使用**。
 
 **登录信息**：用户名固定 `ARTEX`；没有内置默认密码，首次打开时自行设置（至少 8 位），测试/演示环境常用 `admin123456`。忘记密码可在应用目录执行 `reset-password.sh -p '新密码'` 重置，无需重启服务。
 
-0.3.31 补齐了 BaaRai 版独有的三组能力（默认关闭）：任务凭据管理、资产目标审批门禁、覆盖账本；0.3.32 把它们全部接入界面——新建任务的门禁开关、任务详情「目标门禁」页（钉选列表与撤销）、对话页头部门禁入口、拦截页「目标豁免」页签、覆盖页顶部「覆盖账本」卡片。升级时数据库增量由启动自动补齐。
+0.3.31 补齐了 BaaRai 版独有的三组能力（默认关闭）：任务凭据管理、资产目标审批门禁、覆盖账本；0.3.32 把它们全部接入界面；0.3.33 修复日志级别误判（成功的连接测试因响应体含 `"error": null` 被标成 error，现按首行 + HTTP 状态判定）。升级时数据库增量由启动自动补齐。
 
 ### ARTEX BaaRai 版 0.6.1
 
