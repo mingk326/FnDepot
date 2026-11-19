@@ -784,7 +784,7 @@
       }
     },
     "artex": {
-      "display_name": "ARTEX",
+      "display_name": "ARTEX BaaRai 版",
       "desc": "AI 驱动的自动化安全测试平台：面向已授权目标完成资产侦察、漏洞验证与报告生成，内置 10 个技能（API 侦察、代码审计、补丁比对、浏览器自动化等）。本包为飞牛原生 fpk，PostgreSQL 16.14 由依赖包 artexpg 提供（安装本应用时应用中心自动先装），无需 Docker，也不需要外部数据库。仅限已授权目标使用。",
       "platform": [
         "x86",
@@ -882,7 +882,7 @@
       }
     },
     "artexcn": {
-      "display_name": "ARTEX 中文版",
+      "display_name": "ARTEX RuoJi6 版",
       "desc": "中文界面的 ARTEX：AI 自主渗透测试平台，默认简体中文（可切英文），内置定时任务、代理池、请求重放、发现案件、MCP 与任务文件管理。本包为飞牛原生 fpk，PostgreSQL 16.14 由依赖包 artexpg 提供（安装本应用时应用中心自动先装），无需 Docker、无需另装外部数据库。首次打开直接设置管理员密码，无初始化令牌。仅限已授权目标使用。",
       "platform": [
         "x86",

@@ -7,8 +7,8 @@
 | 包名 | 显示名 | 说明 | 平台 |
 |---|---|---|---|
 | `wb2api` | wb2api | WorkBuddy2API：把腾讯 CodeBuddy 账号包装成 OpenAI 兼容 API 的网关，自带 Web 管理面板 | x86 / arm |
-| `artex` | ARTEX | AI 驱动的自动化安全测试平台，PostgreSQL 16.14 由依赖包提供，内置 10 个技能，原生 fpk | x86 / arm |
-| `artexcn` | ARTEX 中文版 | 中文界面的 ARTEX，默认简体中文，含定时任务、代理池、请求重放、案件与 MCP，独立数据库可与英文版并存 | x86 / arm |
+| `artex` | ARTEX BaaRai 版 | AI 驱动的自动化安全测试平台（英文界面），PostgreSQL 16.14 由依赖包提供，内置 10 个技能，原生 fpk | x86 / arm |
+| `artexcn` | ARTEX RuoJi6 版 | 中文界面的 ARTEX（默认简体中文），含定时任务、代理池、请求重放、案件与 MCP，独立数据库可与 BaaRai 版并存 | x86 / arm |
 | `artexpg` | ARTEX PostgreSQL | artex 的数据库依赖包：PostgreSQL 16.14，仅监听 127.0.0.1:55432 | x86 / arm |
 
 ## 添加应用源
@@ -47,15 +47,15 @@ WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容�
 
 安装后面板地址：`http://<NAS-IP>:7863/panel`，模型地址：`http://<NAS-IP>:7863/v1`。面板需**管理员密钥**（安装向导设置的密钥自动为管理员），普通密钥只能调用模型接口。
 
-### ARTEX 中文版 0.3.30
+### ARTEX RuoJi6 版 0.3.30
 
-- [ARTEX 中文版 0.3.30 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-x86.fpk)
-- [ARTEX 中文版 0.3.30 arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-arm.fpk)
+- [ARTEX RuoJi6 版 0.3.30 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-x86.fpk)
+- [ARTEX RuoJi6 版 0.3.30 arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-arm.fpk)
 - 同样依赖 [ARTEX PostgreSQL 16.14](https://github.com/mingk326/FnDepot/releases/tag/artex-2026.11.19)
 
-默认**简体中文**界面，可在右上角切换英文；首次打开直接设置管理员密码（至少 8 位），**没有初始化令牌**，不用翻日志。默认 Web 端口 `28789`、代理 `127.0.0.1:28790`、独立数据库 `artexcn`，因此可以和上面的英文版 ARTEX 并存。内置 10 个技能（中文版 3 个 + 英文版 7 个）。上游 [RuoJi6/ARTEX](https://github.com/RuoJi6/ARTEX)，AGPL-3.0，**仅限已授权目标使用**。
+默认**简体中文**界面，可在右上角切换英文；首次打开直接设置管理员密码（至少 8 位），**没有初始化令牌**，不用翻日志。默认 Web 端口 `28789`、代理 `127.0.0.1:28790`、独立数据库 `artexcn`，因此可以和上面的 ARTEX BaaRai 版并存。内置 10 个技能（中文版 3 个 + 英文版 7 个）。上游 [RuoJi6/ARTEX](https://github.com/RuoJi6/ARTEX)，AGPL-3.0，**仅限已授权目标使用**。
 
-### ARTEX 0.6.1
+### ARTEX BaaRai 版 0.6.1
 
 - [ARTEX 0.6.1 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-x86.fpk)
 - [ARTEX 0.6.1 arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-arm.fpk)
