@@ -780,6 +780,22 @@
               "size": 55476952
             }
           }
+        },
+        "2.11.21": {
+          "changelog": "同步上游 v2.11.20：修复「自定义」选同一天时趋势图全空（#460，单日范围改为按小时取数）；模型中心剔除视频/音频/图片生成模型（#461，选中即失败的模型不再出现，glm-4v、qwen-vl 等产出文本的多模态模型保留）；统计页时间范围新增「昨日」。上游前端与后端同步到 v2.11.20，网关二进制与 scripts 未变。保留飞牛原生定制：自带网关固定 127.0.0.1:7865、保存配置后原生重启并探测就绪（成功不再提示手动一步）、root 启动自动降权、掉线自愈与内置任务脚本；安装包不含预置 manager.db 与固定管理员凭据。",
+          "updated_at": "2026-11-19T14:35:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.24/wb2mgr-2.11.21-x86.fpk",
+              "sha256": "4da10eeea54b8d7778539ad02bd69f53627f9cd127f930a2369add921c59fa14",
+              "size": 61954907
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.24/wb2mgr-2.11.21-arm.fpk",
+              "sha256": "a367fc53618ecc60883188eec6eae7d868d48b5366763d0ee097b3d905eca89b",
+              "size": 55483850
+            }
+          }
         }
       }
     },
