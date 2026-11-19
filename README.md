@@ -62,15 +62,17 @@ WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容�
 
 0.3.31 补齐了 BaaRai 版独有的三组能力（默认关闭）：任务凭据管理、资产目标审批门禁、覆盖账本；0.3.32 把它们全部接入界面；0.3.33 修复日志级别误判；0.3.34 修复 agent 执行命令全部失败（进程无 PATH 导致 bash 找不到）并把任务文件改到应用共享目录。升级时数据库增量由启动自动补齐。
 
-### ARTEX BaaRai 版 0.6.1
+### ARTEX BaaRai 版 0.6.2
 
-- [ARTEX 0.6.1 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-x86.fpk)
-- [ARTEX 0.6.1 arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-arm.fpk)
+- [ARTEX 0.6.2 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19a/artex-0.6.2-x86.fpk)
+- [ARTEX 0.6.2 arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19a/artex-0.6.2-arm.fpk)
 - [ARTEX PostgreSQL 16.14 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artexpg-16.14-x86.fpk)
 - [ARTEX PostgreSQL 16.14 arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artexpg-16.14-arm.fpk)
-- 旧版：[ARTEX 0.6.0 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.0-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.0-arm.fpk)
+- 旧版：[ARTEX 0.6.1 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-arm.fpk) · [0.6.0 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.0-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.0-arm.fpk)
 
 0.6.1 起包含桌面入口：安装后飞牛桌面会直接出现 ARTEX 图标，点击打开 Web 界面（此前 0.6.0 安装后无桌面图标）。
+
+0.6.2 修复了任务里 agent 执行命令全部失败（`exec: "bash": executable file not found in $PATH`，原因是应用中心拉起的进程没有 PATH），并把任务产物改到应用共享目录：文件管理 → 应用文件 → artex → `tasks/<任务ID>`，首次升级自动迁移旧数据。
 
 ARTEX 是 AI 驱动的自动化安全测试平台（上游 [BaaRai/ARTEX](https://github.com/BaaRai/ARTEX)，AGPL-3.0），**仅限已获得明确授权的目标使用**。本包为飞牛原生 fpk，PostgreSQL 16.14 由依赖包 `artexpg` 提供（安装时应用中心自动先装，仅监听 `127.0.0.1:55432`），默认端口 `8787`，安装后访问 `http://<NAS-IP>:8787/`。应用中心会自动拉取依赖，也可先手动安装 `artexpg`。
 
