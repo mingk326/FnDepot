@@ -935,6 +935,22 @@
               "size": 16269263
             }
           }
+        },
+        "0.3.32": {
+          "changelog": "界面补齐（L2 第三批）：新建任务新增「资产目标审批门禁」开关；任务详情新增「目标门禁」页（开关 + 目标钉选列表与撤销）；对话页头部新增目标门禁入口；系统→资产拦截新增「目标豁免」页签（豁免清单编辑、配置派生项、变更历史）；任务覆盖页顶部新增「覆盖账本」卡片（条目/缺口/未检查风险类/完整性）。后端接口与数据库结构不变。",
+          "updated_at": "2026-11-19T09:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-x86.fpk",
+              "sha256": "92dce955c130c58731b353b89365470821dab2b3463c73a238f966810b4b86ad",
+              "size": 17309687
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-arm.fpk",
+              "sha256": "f3c9e4b82e9dabaaa8a78c4229364b08d589ad4e96f55d46121afe83d0072178",
+              "size": 16278959
+            }
+          }
         }
       }
     }
