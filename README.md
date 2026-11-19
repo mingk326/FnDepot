@@ -32,18 +32,18 @@ https://cdn.jsdelivr.net/gh/mingk326/FnDepot@main/fnpack.json
 
 ## 直接下载
 
-- [wb2api 1.25.1 x86](https://github.com/mingk326/FnDepot/releases/download/2026.11.17a/wb2api-1.25.1-x86.fpk)
-- [wb2api 1.25.1 arm](https://github.com/mingk326/FnDepot/releases/download/2026.11.17a/wb2api-1.25.1-arm.fpk)
+- [wb2api 1.25.2 x86](https://github.com/mingk326/FnDepot/releases/download/wb2api-2026.11.19/wb2api-1.25.2-x86.fpk)
+- [wb2api 1.25.2 arm](https://github.com/mingk326/FnDepot/releases/download/wb2api-2026.11.19/wb2api-1.25.2-arm.fpk)
 
-历史版本见 [Releases](https://github.com/mingk326/FnDepot/releases)：1.13.3–1.25.1（每版 x86 / arm）。
+历史版本见 [Releases](https://github.com/mingk326/FnDepot/releases)：1.13.3–1.25.2（每版 x86 / arm）。1.25.2 起账号 `auths/`、`state.json`、`config.json` 存放在「文件管理 → 应用文件 → wb2api」，升级自动迁移。
 
 ## 其他应用
 
-- [WorkBuddy Manager 2.11.21 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.24/wb2mgr-2.11.21-x86.fpk)
-- [WorkBuddy Manager 2.11.21 arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.24/wb2mgr-2.11.21-arm.fpk)
-- 旧版：[2.11.20 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.23/wb2mgr-2.11.20-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.23/wb2mgr-2.11.20-arm.fpk)
+- [WorkBuddy Manager 2.11.22 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.25/wb2mgr-2.11.22-x86.fpk)
+- [WorkBuddy Manager 2.11.22 arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.25/wb2mgr-2.11.22-arm.fpk)
+- 旧版：[2.11.21 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.24/wb2mgr-2.11.21-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.24/wb2mgr-2.11.21-arm.fpk) · [2.11.20 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.23/wb2mgr-2.11.20-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.23/wb2mgr-2.11.20-arm.fpk)
 
-WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容反代网关），本包为飞牛原生 fpk，内置 Python 运行时与上游网关，不需要 Docker。默认面板端口 `7864`，上游仅监听 `127.0.0.1:7865`。2.11.21 同步上游 v2.11.20：修复自定义单日趋势图为空（#460）、模型中心剔除视频/音频/图片生成模型（#461），并新增「昨日」时间范围。
+WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容反代网关），本包为飞牛原生 fpk，内置 Python 运行时与上游网关，不需要 Docker。默认面板端口 `7864`，上游仅监听 `127.0.0.1:7865`。2.11.22 把账号、密钥、用量数据库与上游配置迁到「文件管理 → 应用文件 → wbmgr」（`data/manager.db`、`upstream/`），升级自动迁移；2.11.21 同步上游 v2.11.20：修复自定义单日趋势图为空（#460）、模型中心剔除视频/音频/图片生成模型（#461），并新增「昨日」时间范围。
 
 
 安装后面板地址：`http://<NAS-IP>:7863/panel`，模型地址：`http://<NAS-IP>:7863/v1`。面板需**管理员密钥**（安装向导设置的密钥自动为管理员），普通密钥只能调用模型接口。
@@ -52,7 +52,7 @@ WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容�
 
 - [ARTEX RuoJi6 版 0.3.35 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19e/artexcn-0.3.35-x86.fpk)
 - [ARTEX RuoJi6 版 0.3.35 arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19e/artexcn-0.3.35-arm.fpk)
-- 同样依赖 [ARTEX PostgreSQL 16.14](https://github.com/mingk326/FnDepot/releases/tag/artex-2026.11.19)
+- 同样依赖 [ARTEX PostgreSQL 16.14.1](https://github.com/mingk326/FnDepot/releases/tag/artexpg-2026.11.19)
 - 旧版：[0.3.34 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19d/artexcn-0.3.34-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19d/artexcn-0.3.34-arm.fpk) · [0.3.33 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19c/artexcn-0.3.33-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19c/artexcn-0.3.33-arm.fpk) · [0.3.32 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-arm.fpk)
 
 默认**简体中文**界面，可在右上角切换英文；首次打开直接设置管理员密码（至少 8 位），**没有初始化令牌**，不用翻日志。默认 Web 端口 `28789`、代理 `127.0.0.1:28790`、独立数据库 `artexcn`，因此可以和上面的 ARTEX BaaRai 版并存。内置 10 个技能（中文版 3 个 + 英文版 7 个）。上游 [RuoJi6/ARTEX](https://github.com/RuoJi6/ARTEX)，AGPL-3.0，**仅限已授权目标使用**。
@@ -67,15 +67,16 @@ WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容�
 
 - [ARTEX 0.6.3 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19b/artex-0.6.3-x86.fpk)
 - [ARTEX 0.6.3 arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19b/artex-0.6.3-arm.fpk)
-- [ARTEX PostgreSQL 16.14 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artexpg-16.14-x86.fpk)
-- [ARTEX PostgreSQL 16.14 arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artexpg-16.14-arm.fpk)
+- [ARTEX PostgreSQL 16.14.1 x86](https://github.com/mingk326/FnDepot/releases/download/artexpg-2026.11.19/artexpg-16.14.1-x86.fpk)
+- [ARTEX PostgreSQL 16.14.1 arm](https://github.com/mingk326/FnDepot/releases/download/artexpg-2026.11.19/artexpg-16.14.1-arm.fpk)
+- 旧版：[ARTEX PostgreSQL 16.14 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artexpg-16.14-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artexpg-16.14-arm.fpk)
 - 旧版：[ARTEX 0.6.2 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19a/artex-0.6.2-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19a/artex-0.6.2-arm.fpk) · [0.6.1 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-arm.fpk) · [0.6.0 x86](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.0-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.0-arm.fpk)
 
 0.6.1 起包含桌面入口：安装后飞牛桌面会直接出现 ARTEX 图标，点击打开 Web 界面（此前 0.6.0 安装后无桌面图标）。
 
 0.6.2 修复了任务里 agent 执行命令全部失败（`exec: "bash": executable file not found in $PATH`，原因是应用中心拉起的进程没有 PATH），并把任务产物改到应用共享目录：文件管理 → 应用文件 → artex → `tasks/<任务ID>`，首次升级自动迁移旧数据。0.6.3 修复「应用文件」看不到 artex、共享目录不自动创建（共享目录改为在 `config/resource` 中声明）。
 
-ARTEX 是 AI 驱动的自动化安全测试平台（上游 [BaaRai/ARTEX](https://github.com/BaaRai/ARTEX)，AGPL-3.0），**仅限已获得明确授权的目标使用**。本包为飞牛原生 fpk，PostgreSQL 16.14 由依赖包 `artexpg` 提供（安装时应用中心自动先装，仅监听 `127.0.0.1:55432`），默认端口 `8787`，安装后访问 `http://<NAS-IP>:8787/`。应用中心会自动拉取依赖，也可先手动安装 `artexpg`。
+ARTEX 是 AI 驱动的自动化安全测试平台（上游 [BaaRai/ARTEX](https://github.com/BaaRai/ARTEX)，AGPL-3.0），**仅限已获得明确授权的目标使用**。本包为飞牛原生 fpk，PostgreSQL 16.14 由依赖包 `artexpg` 提供（安装时应用中心自动先装，仅监听 `127.0.0.1:55432`），默认端口 `8787`，安装后访问 `http://<NAS-IP>:8787/`。应用中心会自动拉取依赖，也可先手动安装 `artexpg`。artexpg 16.14.1 起数据库数据在「文件管理 → 应用文件 → artexpg → pgdata」，请勿手动修改或删除。
 
 ## 目录结构
 
