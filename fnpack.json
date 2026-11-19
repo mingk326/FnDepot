@@ -902,21 +902,21 @@
       "run_as": "package",
       "install_type": "",
       "is_docker": false,
-      "service_port": "8789",
+      "service_port": "28789",
       "releases": {
         "0.3.30": {
-          "changelog": "首个中文版：基于 RuoJi6/ARTEX v0.3.30，界面默认简体中文（可切英文）；首次打开直接设置管理员密码，无需日志中的初始化令牌；内置定时任务、代理池、请求重放、发现案件、MCP、任务文件；合并英文版 7 个额外技能，共 10 个；独立数据库 artexcn、独立代理端口 8790，默认 Web 端口 8789，可与英文版并存。",
-          "updated_at": "2026-11-18T23:15:25Z",
+          "changelog": "中文版首发：基于 RuoJi6/ARTEX v0.3.30，界面默认简体中文（可切英文）；首次打开直接设置管理员密码，无需日志中的初始化令牌；内置定时任务、代理池、请求重放、发现案件、MCP、任务文件；合并英文版 7 个额外技能，共 10 个；默认 Web 端口改为高位 28789，代理 28790，独立数据库 artexcn，可与英文版并存。",
+          "updated_at": "2026-11-19T00:11:40Z",
           "packages": {
             "x86": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-x86.fpk",
-              "sha256": "4ba059a7f88970c2a5a0941dc7e0ca8fbabdef89a0f6608fe456df8774b14f11",
-              "size": 17170973
+              "sha256": "af0857aff270a754c47ee904a33e9fece6455777bcf3b60f5390158d7dffcff4",
+              "size": 17171032
             },
             "arm": {
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-arm.fpk",
-              "sha256": "2edcc3ce678a05b3fdad64311d49b46efb03296cc5c43fc814b57e4472548691",
-              "size": 16148653
+              "sha256": "1ed2b9ab0b3d8c6f930f7b709359ec9b20700c899c1529e66d13f8a7dea5b6f4",
+              "size": 16148705
             }
           }
         }
