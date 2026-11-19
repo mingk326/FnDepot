@@ -919,6 +919,22 @@
               "size": 16148713
             }
           }
+        },
+        "0.3.31": {
+          "changelog": "L2 合并：补入 BaaRai 版独有三组能力——任务凭据管理（任务详情「测试账号」页，密码掩码与 AES-GCM 落库，agent 工具 save_task_credential / list_task_credentials）、资产目标审批门禁（任务/对话 target_gate，目标钉选与撤销、豁免清单与变更历史，WebFetch 与自定义工具在重定向与连接层二次判定）、覆盖账本（record_coverage 记录每个面与风险类的检测结果与否定结论，缺口进入规划提示与报告）。数据库启动自动补齐 4 张新表与 5 个新列。",
+          "updated_at": "2026-11-19T09:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-x86.fpk",
+              "sha256": "3d283581baf8bce05a32a3816cb355c76a3c969060726d47b3b8556c5725f53f",
+              "size": 17304656
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-arm.fpk",
+              "sha256": "fc9fd5d9972f8f720e75d7a92eb35a1c4f69094acad1dcb6a190278df2a9e68c",
+              "size": 16269263
+            }
+          }
         }
       }
     }
