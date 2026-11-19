@@ -7,7 +7,9 @@ ARTEX 专用的 PostgreSQL 16.14 原生运行时，作为 `artex` 的安装依�
 
 - 仅监听 `127.0.0.1:55432`，不对外暴露；socket 位于 `/vol*/@appdata/artexpg/run`
 - 超级用户 `artex`，默认数据库 `artex`；密码安装时随机生成，写入 `/vol*/@appdata/artexpg/pgpass`（0644）
-- 集群数据在 `/vol*/@appdata/artexpg/pgdata`，首次启动时初始化；日志在 `pg.log`
+- 集群数据在 `/vol4/@appshare/artexpg/pgdata`（文件管理 → 应用文件 → artexpg），首次启动时初始化；升级 16.14.1 自动从旧私有目录迁移
+- **请勿在文件管理中重命名、删除或修改 `pgdata` 内的任何文件**，会直接损坏 ARTEX 数据库；密码文件 `pgpass` 与 socket 仍留在私有目录
+- 日志在 `/vol*/@appdata/artexpg/pg.log`
 - 服务进程以专用用户 `artexpg` 运行，**不使用 root**
 - 不修改宿主系统目录：PG 编译期写死的 SHAREDIR 由每次启动的私有 mount 命名空间绑定，宿主 `/usr/share/postgresql` 保持原样
 - 压缩包内只带 PG16 与必要共享库，JIT 已关闭；glibc 核心库跟随宿主（要求 glibc ≥ 2.34）
