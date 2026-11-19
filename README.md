@@ -8,7 +8,7 @@
 |---|---|---|---|
 | `wb2api` | wb2api | WorkBuddy2API：把腾讯 CodeBuddy 账号包装成 OpenAI 兼容 API 的网关，自带 Web 管理面板 | x86 / arm |
 | `artex` | ARTEX BaaRai 版 | AI 驱动的自动化安全测试平台（英文界面），PostgreSQL 16.14 由依赖包提供，内置 10 个技能，原生 fpk | x86 / arm |
-| `artexcn` | ARTEX RuoJi6 版 | 中文界面的 ARTEX（默认简体中文），含定时任务、代理池、请求重放、案件与 MCP，0.3.31 起补齐任务凭据、目标审批门禁与覆盖账本，独立数据库可与 BaaRai 版并存 | x86 / arm |
+| `artexcn` | ARTEX RuoJi6 版 | 中文界面的 ARTEX（默认简体中文），含定时任务、代理池、请求重放、案件与 MCP，0.3.31–0.3.32 补齐任务凭据、目标审批门禁与覆盖账本的界面与后端，独立数据库可与 BaaRai 版并存 | x86 / arm |
 | `artexpg` | ARTEX PostgreSQL | ARTEX BaaRai 版 / RuoJi6 版的数据库依赖包：PostgreSQL 16.14，仅监听 127.0.0.1:55432 | x86 / arm |
 
 ## 添加应用源
@@ -47,16 +47,16 @@ WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容�
 
 安装后面板地址：`http://<NAS-IP>:7863/panel`，模型地址：`http://<NAS-IP>:7863/v1`。面板需**管理员密钥**（安装向导设置的密钥自动为管理员），普通密钥只能调用模型接口。
 
-### ARTEX RuoJi6 版 0.3.31
+### ARTEX RuoJi6 版 0.3.32
 
-- [ARTEX RuoJi6 版 0.3.31 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-x86.fpk)
-- [ARTEX RuoJi6 版 0.3.31 arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-arm.fpk)
+- [ARTEX RuoJi6 版 0.3.32 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-x86.fpk)
+- [ARTEX RuoJi6 版 0.3.32 arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19b/artexcn-0.3.32-arm.fpk)
 - 同样依赖 [ARTEX PostgreSQL 16.14](https://github.com/mingk326/FnDepot/releases/tag/artex-2026.11.19)
-- 旧版：[0.3.30 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-arm.fpk)
+- 旧版：[0.3.31 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19a/artexcn-0.3.31-arm.fpk) · [0.3.30 x86](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19/artexcn-0.3.30-arm.fpk)
 
 默认**简体中文**界面，可在右上角切换英文；首次打开直接设置管理员密码（至少 8 位），**没有初始化令牌**，不用翻日志。默认 Web 端口 `28789`、代理 `127.0.0.1:28790`、独立数据库 `artexcn`，因此可以和上面的 ARTEX BaaRai 版并存。内置 10 个技能（中文版 3 个 + 英文版 7 个）。上游 [RuoJi6/ARTEX](https://github.com/RuoJi6/ARTEX)，AGPL-3.0，**仅限已授权目标使用**。
 
-0.3.31 补齐了 BaaRai 版独有的三组能力（默认关闭）：任务凭据管理（任务详情「测试账号」页）、资产目标审批门禁（任务 / 对话 `target_gate`，目标钉选与豁免清单）、覆盖账本（`record_coverage` 记录检测结果与否定结论）。升级时数据库增量由启动自动补齐。
+0.3.31 补齐了 BaaRai 版独有的三组能力（默认关闭）：任务凭据管理、资产目标审批门禁、覆盖账本；0.3.32 把它们全部接入界面——新建任务的门禁开关、任务详情「目标门禁」页（钉选列表与撤销）、对话页头部门禁入口、拦截页「目标豁免」页签、覆盖页顶部「覆盖账本」卡片。升级时数据库增量由启动自动补齐。
 
 ### ARTEX BaaRai 版 0.6.1
 
