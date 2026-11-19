@@ -951,6 +951,22 @@
               "size": 16278959
             }
           }
+        },
+        "0.3.33": {
+          "changelog": "修复日志级别误判：连接测试会把完整响应体附在日志里，成功的响应同样包含 \"error\": null，旧逻辑按整段文本匹配关键字，导致 HTTP 200 的成功测试在「系统 → 日志」中显示为 error。现在只按首行判定，并增加 HTTP 状态兜底（4xx/5xx 记为 error），失败原因在响应体里也不会漏报；新增单元测试。功能与接口无变化。",
+          "updated_at": "2026-11-19T10:10:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19c/artexcn-0.3.33-x86.fpk",
+              "sha256": "4b0c5bd4809dbdff620586c92ac86aadaca7befb57a429cf64a1b0f5244e4ed0",
+              "size": 17310151
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19c/artexcn-0.3.33-arm.fpk",
+              "sha256": "10d83918fced3b8990f14b5ec2c122729f65430a0f2ea51ecc97853fbd370fc5",
+              "size": 16279414
+            }
+          }
         }
       }
     }
