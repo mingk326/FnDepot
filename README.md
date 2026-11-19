@@ -9,7 +9,7 @@
 | `wb2api` | wb2api | WorkBuddy2API：把腾讯 CodeBuddy 账号包装成 OpenAI 兼容 API 的网关，自带 Web 管理面板 | x86 / arm |
 | `artex` | ARTEX BaaRai 版 | AI 驱动的自动化安全测试平台（英文界面），PostgreSQL 16.14 由依赖包提供，内置 10 个技能，原生 fpk | x86 / arm |
 | `artexcn` | ARTEX RuoJi6 版 | 中文界面的 ARTEX（默认简体中文），含定时任务、代理池、请求重放、案件与 MCP，独立数据库可与 BaaRai 版并存 | x86 / arm |
-| `artexpg` | ARTEX PostgreSQL | artex 的数据库依赖包：PostgreSQL 16.14，仅监听 127.0.0.1:55432 | x86 / arm |
+| `artexpg` | ARTEX PostgreSQL | ARTEX BaaRai 版 / RuoJi6 版的数据库依赖包：PostgreSQL 16.14，仅监听 127.0.0.1:55432 | x86 / arm |
 
 ## 添加应用源
 

@@ -842,7 +842,7 @@
     },
     "artexpg": {
       "display_name": "ARTEX PostgreSQL",
-      "desc": "ARTEX 专用的 PostgreSQL 16.14 原生运行时，仅监听 127.0.0.1:55432，作为 artex 的安装依赖自动部署。超级用户 artex、默认库 artex，密码安装时随机生成；服务进程以专用用户 artexpg 运行，不修改宿主系统目录。",
+      "desc": "PostgreSQL 16.14 数据库运行时，为 ARTEX BaaRai 版 / RuoJi6 版提供数据存储。仅监听 127.0.0.1:55432，不对外暴露。安装 ARTEX 时由应用中心自动先装本包，通常无需单独操作。",
       "platform": [
         "x86",
         "arm"
