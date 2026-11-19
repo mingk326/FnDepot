@@ -785,7 +785,7 @@
     },
     "artex": {
       "display_name": "ARTEX BaaRai 版",
-      "desc": "AI 驱动的自动化安全测试平台：面向已授权目标完成资产侦察、漏洞验证与报告生成，内置 10 个技能（API 侦察、代码审计、补丁比对、浏览器自动化等）。本包为飞牛原生 fpk，PostgreSQL 16.14 由依赖包 artexpg 提供（安装本应用时应用中心自动先装），无需 Docker，也不需要外部数据库。仅限已授权目标使用。",
+      "desc": "AI 驱动的自动化安全测试平台：面向已授权目标完成资产侦察、漏洞验证与报告生成，内置 10 个技能（API 侦察、代码审计、补丁比对、浏览器自动化等）。本包为飞牛原生 fpk，PostgreSQL 16.14 由依赖包 artexpg 提供（安装本应用时应用中心自动先装），无需 Docker，也不需要外部数据库。仅限已授权目标使用。 任务产物存放在应用共享目录：文件管理 → 应用文件 → artex（tasks/<任务ID>），可直接查看和删除。",
       "platform": [
         "x86",
         "arm"
@@ -835,6 +835,22 @@
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19/artex-0.6.1-arm.fpk",
               "sha256": "b8d69bfd4ea290f26362ea933f2c12ab27b67bd82294e22275b719dacac1846a",
               "size": 14950786
+            }
+          }
+        },
+        "0.6.2": {
+          "changelog": "1) 修复 agent 执行命令全部失败：应用中心拉起的进程没有 PATH，Bash / shell_open 报 `exec: \"bash\": executable file not found in $PATH`；包脚本现在显式补齐标准 PATH。2) 任务产物改存到应用共享目录：声明 data-share 后文件写入 /vol4/@appshare/artex（文件管理 → 应用文件 可见、可直接删除），首次启动自动迁移旧数据，共享目录不可用时回落私有目录。上游二进制仍为 BaaRai/ARTEX v0.6.0。",
+          "updated_at": "2026-11-19T13:10:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19a/artex-0.6.2-x86.fpk",
+              "sha256": "3dea0a1ddd64b94d51f0f70c6be74513b4db98c374baf630eaf24481f23e3316",
+              "size": 15919323
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19a/artex-0.6.2-arm.fpk",
+              "sha256": "05006c24dd47114021a9be44fac3a432214e2064acdfed8a875b26507efef170",
+              "size": 14951882
             }
           }
         }
