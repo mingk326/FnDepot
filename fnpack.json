@@ -869,6 +869,22 @@
               "size": 14951882
             }
           }
+        },
+        "0.6.3": {
+          "changelog": "修复共享目录不自动创建、文件管理「应用文件」看不到 artex：按飞牛规范在 config/resource 中声明 data-share.shares（此前只写在 manifest，系统不识别）。安装/升级时自动创建 /vol4/@appshare/artex 并授权给 artex 用户；任务产物继续写入该目录，已有数据不受影响。上游二进制仍为 BaaRai/ARTEX v0.6.0。",
+          "updated_at": "2026-11-19T15:58:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19b/artex-0.6.3-x86.fpk",
+              "sha256": "c5d942fbf503bf2b4e3b45a9719fb704e754a646caa909a6e7e37749b9b71c7b",
+              "size": 15919298
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artex-2026.11.19b/artex-0.6.3-arm.fpk",
+              "sha256": "645d422d8ae71f364072ea8e66f081fdbd0b09313bf20d98df6a3579eae8fe3e",
+              "size": 14951847
+            }
+          }
         }
       }
     },
@@ -1013,6 +1029,22 @@
               "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19d/artexcn-0.3.34-arm.fpk",
               "sha256": "360e994eaeaba89d12547c6f25af1cd58d4980b73bb19f7948a4806bac22b4a1",
               "size": 16280054
+            }
+          }
+        },
+        "0.3.35": {
+          "changelog": "修复共享目录不自动创建、文件管理「应用文件」看不到 artexcn：按飞牛规范在 config/resource 中声明 data-share.shares（此前只写在 manifest，系统不识别）。安装/升级时自动创建 /vol4/@appshare/artexcn 并授权给 artexcn 用户；任务产物继续写入该目录，已有数据不受影响。",
+          "updated_at": "2026-11-19T15:58:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19e/artexcn-0.3.35-x86.fpk",
+              "sha256": "9e174441454af78d73f03152220e32b31c2f3e5fdce98cc5a68958dae0f66b4d",
+              "size": 17315102
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/artexcn-2026.11.19e/artexcn-0.3.35-arm.fpk",
+              "sha256": "052e81f4e9cdc247a86cf5b515f724cf6682713cf6ca3b30b8938901989d940f",
+              "size": 16280065
             }
           }
         }
