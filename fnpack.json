@@ -828,6 +828,22 @@
               "size": 55482600
             }
           }
+        },
+        "2.11.23": {
+          "changelog": "同步上游 v2.11.21：面板字体改为随程序分发（构建不再依赖 Google Fonts，界面外观不变）；补充 Docker 部署数据卷说明。上游本版无运行时行为变化。保留飞牛定制：账号与用量数据存放在应用共享目录（文件管理 → 应用文件 → wbmgr）、自带网关固定 127.0.0.1:7865、数据目录迁移逻辑。",
+          "updated_at": "2026-11-20T11:10:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.26/wb2mgr-2.11.23-x86.fpk",
+              "sha256": "cd5b2a6f539281797fd2d12bbf2b0b36cd6b7a95d597fa040fc9052d31c6c226",
+              "size": 57144360
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.26/wb2mgr-2.11.23-arm.fpk",
+              "sha256": "4da411d9bc92de0aed4589403d188ce8397db79cc90369bc9f7ce21f0bca5bd5",
+              "size": 50660628
+            }
+          }
         }
       }
     },
