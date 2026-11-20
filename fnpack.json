@@ -844,6 +844,22 @@
               "size": 50660628
             }
           }
+        },
+        "2.11.24": {
+          "changelog": "新增自带网关监听地址可配置：安装向导与应用设置可填写 127.0.0.1:7865（默认，仅本机）或 0.0.0.0:7865（局域网），端口 1024-65535，修改后重启生效；管理端始终通过本机回环访问网关。其余与 2.11.23（上游 v2.11.21）一致。",
+          "updated_at": "2026-11-20T12:20:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.27/wb2mgr-2.11.24-x86.fpk",
+              "sha256": "35fe5ecb631c989e3dc65739ba97dafc996b983096402e3adfd736298c1241cd",
+              "size": 57144918
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.27/wb2mgr-2.11.24-arm.fpk",
+              "sha256": "c2fcc214b330285f188a4acad8a0d10230d7f361bb2b742f1f28b3acb38a640a",
+              "size": 50662796
+            }
+          }
         }
       }
     },
