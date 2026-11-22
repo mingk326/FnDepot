@@ -39,11 +39,11 @@ https://cdn.jsdelivr.net/gh/mingk326/FnDepot@main/fnpack.json
 
 ## 其他应用
 
-- [WorkBuddy Manager 2.11.24 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.27/wb2mgr-2.11.24-x86.fpk)
-- [WorkBuddy Manager 2.11.24 arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.27/wb2mgr-2.11.24-arm.fpk)
-- 旧版：[2.11.23 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.26/wb2mgr-2.11.23-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.26/wb2mgr-2.11.23-arm.fpk) · [2.11.22 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.25/wb2mgr-2.11.22-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.25/wb2mgr-2.11.22-arm.fpk) · [2.11.21 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.24/wb2mgr-2.11.21-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.24/wb2mgr-2.11.21-arm.fpk)
+- [WorkBuddy Manager 2.11.25 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.28/wb2mgr-2.11.25-x86.fpk)
+- [WorkBuddy Manager 2.11.25 arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.28/wb2mgr-2.11.25-arm.fpk)
+- 旧版：[2.11.24 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.27/wb2mgr-2.11.24-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.27/wb2mgr-2.11.24-arm.fpk) · [2.11.23 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.26/wb2mgr-2.11.23-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.26/wb2mgr-2.11.23-arm.fpk) · [2.11.22 x86](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.25/wb2mgr-2.11.22-x86.fpk) / [arm](https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.25/wb2mgr-2.11.22-arm.fpk)
 
-WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容反代网关），本包为飞牛原生 fpk，内置 Python 运行时与上游网关，不需要 Docker。默认面板端口 `7864`，自带网关默认仅监听 `127.0.0.1:7865`。2.11.24 新增「自带网关监听地址」设置：可在安装向导或应用设置里改为 `0.0.0.0:7865` 供局域网直接调用（需注意网关密钥与防火墙，修改后重启生效）；2.11.23 同步上游 v2.11.21（字体随程序分发、Docker 卷说明，无运行时变化）；2.11.22 把账号、密钥、用量数据库与上游配置迁到「文件管理 → 应用文件 → wbmgr」（`data/manager.db`、`upstream/`），升级自动迁移。
+WorkBuddy Manager 是 CodeBuddy 账号池管理控制台（内含 OpenAI 兼容反代网关），本包为飞牛原生 fpk，内置 Python 运行时与上游网关，不需要 Docker。默认面板端口 `7864`，自带网关默认仅监听 `127.0.0.1:7865`。2.11.25 同步上游 v2.11.22（日志不再刷屏、启动失败只打印根因、Docker 部署改进，本包为原生 fpk 不涉及 Docker）；2.11.24 新增「自带网关监听地址」设置：可在安装向导或应用设置里改为 `0.0.0.0:7865` 供局域网直接调用（需注意网关密钥与防火墙，修改后重启生效）；2.11.22 把账号、密钥、用量数据库与上游配置迁到「文件管理 → 应用文件 → wbmgr」（`data/manager.db`、`upstream/`），升级自动迁移。
 
 
 安装后面板地址：`http://<NAS-IP>:7863/panel`，模型地址：`http://<NAS-IP>:7863/v1`。面板需**管理员密钥**（安装向导设置的密钥自动为管理员），普通密钥只能调用模型接口。
