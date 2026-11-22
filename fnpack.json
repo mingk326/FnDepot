@@ -876,6 +876,22 @@
               "size": 50723799
             }
           }
+        },
+        "2.11.26": {
+          "changelog": "同步上游 v2.11.23：修复 Docker 镜像缺少 su-exec 导致容器反复重启、WB_FIX_OWNERSHIP=0 时上游配置不生成、首次生成配置权限过宽（本包为原生 fpk，运行时不走 Docker，配置一直以 0600 写入）。上游本版无服务端功能变化，仅版本号与前端构建更新。保留飞牛定制：数据存应用共享目录、自带网关监听地址可配置。",
+          "updated_at": "2026-11-22T16:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.29/wb2mgr-2.11.26-x86.fpk",
+              "sha256": "090855b2727abe4d3679fd1a64bc6a8a0392402412fb0b4326c8c9114a8da3d4",
+              "size": 57200544
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.29/wb2mgr-2.11.26-arm.fpk",
+              "sha256": "0334982bd49357e94d522f26bfc81e380a0fd664adc5578d2267d7b163d66433",
+              "size": 50718226
+            }
+          }
         }
       }
     },
