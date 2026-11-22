@@ -860,6 +860,22 @@
               "size": 50662796
             }
           }
+        },
+        "2.11.25": {
+          "changelog": "同步上游 v2.11.22：容器日志不再刷屏、启动失败只打印根因与修法（逐请求 access log 默认关闭，可用 WB_ACCESS_LOG=1 恢复）；成长任务自带上游脚本；新增 Docker compose/数据目录属主自适应（本包为原生 fpk，不涉及）。保留飞牛定制：数据存应用共享目录、自带网关监听地址可配置。",
+          "updated_at": "2026-11-22T07:30:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.28/wb2mgr-2.11.25-x86.fpk",
+              "sha256": "fbeb7105174b4a0392d47fe9bae48f46a439f60e42f6b63d5f900f0aa60fe29a",
+              "size": 57199442
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.28/wb2mgr-2.11.25-arm.fpk",
+              "sha256": "3633c9ede90ac614332e6bcbe7b7c4fc3f15dd9f9da3214f3de88cef423b5ecb",
+              "size": 50723799
+            }
+          }
         }
       }
     },
