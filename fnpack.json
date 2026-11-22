@@ -594,6 +594,22 @@
               "size": 4735284
             }
           }
+        },
+        "1.26.0": {
+          "changelog": "同步上游 misakano7545/workbuddy2api-panel 修复：1) 11102「模型 id 不存在」改为请求级错误，返回 400 model_unavailable，不再轮转账号、不写账号负缓存、不冷却健康号；2) /v1/responses 回放历史时同一轮 assistant 正文与工具调用合并为一条消息（此前拆成两条，上游会拒绝或丢失上下文）。另修复模型规则重启后丢失（规则本体与账号引用写入 state.json），补齐 toolonly 对「末句是下一步意图」的识别；禁用账号对外 credits 恒为 0，真实快照在 credits_raw。",
+          "updated_at": "2026-11-22T22:47:58Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wb2api-2026.11.23/wb2api-1.26.0-x86.fpk",
+              "sha256": "95df3b60b5e4aebb610fe1ad4c34dca3b39cca55b9f2fe6814dc63f539501f0c",
+              "size": 5462081
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wb2api-2026.11.23/wb2api-1.26.0-arm.fpk",
+              "sha256": "4774593bcb7a1fe8d1aa6a3ed44e9d02b17597037fab052a6a30edc0f677bf80",
+              "size": 4934573
+            }
+          }
         }
       }
     },
