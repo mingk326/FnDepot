@@ -610,6 +610,22 @@
               "size": 4934573
             }
           }
+        },
+        "1.26.1": {
+          "changelog": "同步上游 misakano7545/workbuddy2api-panel 24e59f8 之后 8 个提交中适用于本包的修复：1) 独立的 ::browser-complete 浏览器完成控制标记不再作为正文透传，网关改为补发一次续写（支持跨 delta 拆分的标记，未闭合候选原样回吐）；2) 续写/救援指令改为中性内部标记，不暴露网关名称，并提示「已完成则静默结束」；3) 模型目录降级 WARN 每种只报一次；4) /v1/models 同域同名优惠模型补标签（如「Hy4 flash（限时免费）」）避免误选。面板类上游改动本包无对应模块，未移植。",
+          "updated_at": "2026-11-25T11:05:00Z",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wb2api-2026.11.25/wb2api-1.26.1-x86.fpk",
+              "sha256": "6e7d8f1df5ebe9eb5348d7584c0a07a2237669596af44a0ed30ef87fb8640238",
+              "size": 5466310
+            },
+            "arm": {
+              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wb2api-2026.11.25/wb2api-1.26.1-arm.fpk",
+              "sha256": "4023ea23d04e7806b129b1195bae15c1564c87fef1814ea4ec5f6175b372b239",
+              "size": 4940466
+            }
+          }
         }
       }
     },
