@@ -924,22 +924,6 @@
               "size": 50718226
             }
           }
-        },
-        "2.11.27": {
-          "changelog": "修复 Trae 等第三方客户端经自带网关调用时报 400 code=11-128 channel_check_rejected（渠道校验拦截）：包内自带网关没有品牌词清洗，而 Trae 的 system prompt 含 9 处 Trae/TraeCode 字样，被上游按字面量判为非官方客户端。本版把包内网关替换为同源的 workbuddy2api 1.26.1（面板版）：出站请求统一做品牌指纹清洗，另带上游 ::browser-complete 续写、11102 模型不存在按请求级报错（不冷却账号）、/v1/responses 同轮正文与工具调用合并回放等修复。管理端、前端、账号数据格式不变，自带网关对外接口保持兼容。",
-          "updated_at": "2026-11-25T18:40:00Z",
-          "packages": {
-            "x86": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.30/wb2mgr-2.11.27-x86.fpk",
-              "sha256": "4b0098cf450181462da9b30f4301e18865dfc3626d45d5aaaa7f962a18e1a011",
-              "size": 58752976
-            },
-            "arm": {
-              "download_url": "https://github.com/mingk326/FnDepot/releases/download/wbmgr-2026.11.30/wb2mgr-2.11.27-arm.fpk",
-              "sha256": "b0700752f9dbd5de34c1c1fa25d9001debdc5743499539ca851ef3b8d6b0505f",
-              "size": 52103127
-            }
-          }
         }
       }
     },
